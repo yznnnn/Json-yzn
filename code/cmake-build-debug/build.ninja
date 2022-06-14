@@ -118,6 +118,13 @@ build test/CMakeFiles/lib_test.dir/TestJsonNode.cpp.obj: CXX_COMPILER__lib_test_
   OBJECT_DIR = test\CMakeFiles\lib_test.dir
   OBJECT_FILE_DIR = test\CMakeFiles\lib_test.dir
 
+build test/CMakeFiles/lib_test.dir/TestJsonParser.cpp.obj: CXX_COMPILER__lib_test_Debug C$:/Users/yzn/Documents/GitHub/Json-yzn/code/test/TestJsonParser.cpp || cmake_object_order_depends_target_lib_test
+  DEP_FILE = test\CMakeFiles\lib_test.dir\TestJsonParser.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -IC:/Users/yzn/Documents/GitHub/Json-yzn/code/./test
+  OBJECT_DIR = test\CMakeFiles\lib_test.dir
+  OBJECT_FILE_DIR = test\CMakeFiles\lib_test.dir
+
 build test/CMakeFiles/lib_test.dir/test.cpp.obj: CXX_COMPILER__lib_test_Debug C$:/Users/yzn/Documents/GitHub/Json-yzn/code/test/test.cpp || cmake_object_order_depends_target_lib_test
   DEP_FILE = test\CMakeFiles\lib_test.dir\test.cpp.obj.d
   FLAGS = -g -std=gnu++14
@@ -133,7 +140,7 @@ build test/CMakeFiles/lib_test.dir/test.cpp.obj: CXX_COMPILER__lib_test_Debug C$
 #############################################
 # Link the static library test\liblib_test.a
 
-build test/liblib_test.a: CXX_STATIC_LIBRARY_LINKER__lib_test_Debug test/CMakeFiles/lib_test.dir/TestJsonNode.cpp.obj test/CMakeFiles/lib_test.dir/test.cpp.obj
+build test/liblib_test.a: CXX_STATIC_LIBRARY_LINKER__lib_test_Debug test/CMakeFiles/lib_test.dir/TestJsonNode.cpp.obj test/CMakeFiles/lib_test.dir/TestJsonParser.cpp.obj test/CMakeFiles/lib_test.dir/test.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = test\CMakeFiles\lib_test.dir
   POST_BUILD = cd .

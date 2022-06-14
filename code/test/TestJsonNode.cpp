@@ -84,6 +84,7 @@ namespace yzn {
 
 
     void TestJsonNode::test() {
+        std::cout << "----------------------------------[ test JsonNode ]----------------------------------" << std::endl;
         test_JsonNode();
         test_JsonNullNode();
         test_JsonTrueNode();

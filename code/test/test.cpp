@@ -5,8 +5,8 @@
 #include "test.h"
 
 namespace yzn {
-
-    void test(){
-        TestJsonNode::test();
+    void test() {
+        //TestJsonNode::test();
+        TestJsonParser::test();
     }
 }// namespace yzn
