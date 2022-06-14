@@ -37,6 +37,7 @@ namespace yzn {
             free(this->str);
             this->str = nullptr;
             this->str_len = 0;
+            //std::cout << "myString Free." << std::endl;
         }
 
 
@@ -46,6 +47,8 @@ namespace yzn {
             this->str_len = 0;
             this->memUpdate(this->str_len);
             this->str[this->str_len] = '\0';
+
+            //std::cout << "myString Ctor." << std::endl;
         }
 
         explicit myString(const char *input_str);

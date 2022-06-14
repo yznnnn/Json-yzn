@@ -36,7 +36,13 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 11,
+				"line" : 12,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 16,
 				"parent" : 2
 			}
 		]
@@ -57,6 +63,10 @@
 			[
 				{
 					"backtrace" : 3,
+					"path" : "C:/Users/yzn/Documents/GitHub/Json-yzn/code/./test"
+				},
+				{
+					"backtrace" : 4,
 					"path" : "C:/Users/yzn/Documents/GitHub/Json-yzn/code/./myString"
 				}
 			],

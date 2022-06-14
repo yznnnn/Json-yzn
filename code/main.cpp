@@ -1,12 +1,10 @@
-#include "./myString/myString.h"
+#include "./test/test.h"
 #include <iostream>
 
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
-    yzn::test_myString();
-
-
+    yzn::testForJsonNode();
 
     return 0;
 }

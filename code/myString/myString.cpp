@@ -117,7 +117,7 @@ namespace yzn {
 
 
     std::ostream &operator<<(std::ostream &os, const yzn::myString &str) {
-        return os << str.getStr() << std::endl;
+        return os << str.getStr();
     }
 
     void test_myString() {

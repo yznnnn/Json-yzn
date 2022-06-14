@@ -8,7 +8,9 @@
 					"build" : ".",
 					"childIndexes" : 
 					[
-						1
+						1,
+						2,
+						3
 					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
@@ -23,6 +25,21 @@
 					]
 				},
 				{
+					"build" : "test",
+					"jsonFile" : "directory-test-Debug-f18be1977b403cfd1a50.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "test",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
 					"build" : "myString",
 					"jsonFile" : "directory-myString-Debug-a04b1bba43d71c286645.json",
 					"minimumCMakeVersion" : 
@@ -32,6 +49,21 @@
 					"parentIndex" : 0,
 					"projectIndex" : 0,
 					"source" : "myString",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "JsonNode",
+					"jsonFile" : "directory-JsonNode-Debug-379a0c7e5a11b54ae57a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "JsonNode",
 					"targetIndexes" : 
 					[
 						1
@@ -45,13 +77,17 @@
 					"directoryIndexes" : 
 					[
 						0,
-						1
+						1,
+						2,
+						3
 					],
 					"name" : "json-demo",
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2,
+						3
 					]
 				}
 			],
@@ -60,15 +96,29 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "json-demo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-json-demo-Debug-609a4eb26f83f2944825.json",
+					"jsonFile" : "target-json-demo-Debug-5d8062f9de66c1034061.json",
 					"name" : "json-demo",
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 1,
+					"directoryIndex" : 3,
+					"id" : "lib_JsonNode::@7c530decee1889ecd2e7",
+					"jsonFile" : "target-lib_JsonNode-Debug-b4a1aaed7def39d59903.json",
+					"name" : "lib_JsonNode",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
 					"id" : "lib_myString::@843f0c40ce000579d36b",
-					"jsonFile" : "target-lib_myString-Debug-27180d8c5f246f4eef3f.json",
+					"jsonFile" : "target-lib_myString-Debug-7c5d9f7630d9fac2f01f.json",
 					"name" : "lib_myString",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "lib_test::@36f028580bb02cc8272a",
+					"jsonFile" : "target-lib_test-Debug-737ec096acb6433e3daa.json",
+					"name" : "lib_test",
 					"projectIndex" : 0
 				}
 			]
