@@ -1,0 +1,8 @@
+# ninja log v5
+1010	1117	6768903444010935	basic-data-structure.exe	3737505c149f788e
+0	857	6768903441441776	CMakeFiles/basic-data-structure.dir/main.cpp.obj	e16c2db1af78cb22
+1	198	6768903826472957	build.ninja	ac7c4a1c71fd15f2
+10	892	6768903441771786	myString/CMakeFiles/lib_myString.dir/myString.cpp.obj	d3ff41e8e1ab8660
+892	1010	6768903442976514	myString/liblib_myString.a	2bc0e66e5cc30656
+3	308	6768903871437245	CMakeFiles/json-demo.dir/main.cpp.obj	aae5fefbc14e6937
+308	403	6768903872377998	json-demo.exe	ecb701303a8589d1
