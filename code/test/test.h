@@ -4,19 +4,10 @@
 
 #ifndef JSON_DEMO_TEST_H
 #define JSON_DEMO_TEST_H
-#include "../JsonNode/JsonFalseNode.h"
-#include "../JsonNode/JsonNode.h"
-#include "../JsonNode/JsonNullNode.h"
-#include "../JsonNode/JsonNumberNode.h"
-#include "../JsonNode/JsonStringNode.h"
-#include "../JsonNode/JsonTrueNode.h"
-#include "../myString/myString.h"
+#include "TestJsonNode.h"
 #include <iostream>
 namespace yzn {
-
-    void testForJsonNode();
-
-
+    void test();
 }// namespace yzn
 
 #endif//JSON_DEMO_TEST_H

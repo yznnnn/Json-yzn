@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD 14)
 aux_source_directory(. DIR_SRCS)
 
 
-# 添加 string 目录
+# 添加 test 目录
 include_directories(./test)  # 添加 .h   文件目录
 add_subdirectory(./test)     # 添加 .cpp 文件目录
 
@@ -20,7 +20,11 @@ add_subdirectory(./myString)     # 添加 .cpp 文件目录
 include_directories(./JsonNode)  # 添加 .h   文件目录
 add_subdirectory(./JsonNode)     # 添加 .cpp 文件目录
 
+# 添加 JsonParser 目录
+include_directories(./JsonParser)  # 添加 .h   文件目录
+add_subdirectory(./JsonParser)     # 添加 .cpp 文件目录
+
 # 生成可执行文件
 add_executable(json-demo ${DIR_SRCS})
-target_link_libraries(json-demo lib_test lib_myString lib_JsonNode)
+target_link_libraries(json-demo lib_test lib_myString lib_JsonNode lib_JsonParser)
 

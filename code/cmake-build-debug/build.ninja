@@ -47,12 +47,12 @@ cmake_ninja_workdir = C$:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-d
 #############################################
 # Order-only phony target for json-demo
 
-build cmake_object_order_depends_target_json-demo: phony || cmake_object_order_depends_target_lib_JsonNode cmake_object_order_depends_target_lib_myString cmake_object_order_depends_target_lib_test
+build cmake_object_order_depends_target_json-demo: phony || cmake_object_order_depends_target_lib_JsonNode cmake_object_order_depends_target_lib_JsonParser cmake_object_order_depends_target_lib_myString cmake_object_order_depends_target_lib_test
 
 build CMakeFiles/json-demo.dir/main.cpp.obj: CXX_COMPILER__json-demo_Debug C$:/Users/yzn/Documents/GitHub/Json-yzn/code/main.cpp || cmake_object_order_depends_target_json-demo
   DEP_FILE = CMakeFiles\json-demo.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -IC:/Users/yzn/Documents/GitHub/Json-yzn/code/./test -IC:/Users/yzn/Documents/GitHub/Json-yzn/code/./myString -IC:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonNode
+  INCLUDES = -IC:/Users/yzn/Documents/GitHub/Json-yzn/code/./test -IC:/Users/yzn/Documents/GitHub/Json-yzn/code/./myString -IC:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonNode -IC:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonParser
   OBJECT_DIR = CMakeFiles\json-demo.dir
   OBJECT_FILE_DIR = CMakeFiles\json-demo.dir
 
@@ -64,9 +64,9 @@ build CMakeFiles/json-demo.dir/main.cpp.obj: CXX_COMPILER__json-demo_Debug C$:/U
 #############################################
 # Link the executable json-demo.exe
 
-build json-demo.exe: CXX_EXECUTABLE_LINKER__json-demo_Debug CMakeFiles/json-demo.dir/main.cpp.obj | test/liblib_test.a myString/liblib_myString.a JsonNode/liblib_JsonNode.a || JsonNode/liblib_JsonNode.a myString/liblib_myString.a test/liblib_test.a
+build json-demo.exe: CXX_EXECUTABLE_LINKER__json-demo_Debug CMakeFiles/json-demo.dir/main.cpp.obj | test/liblib_test.a myString/liblib_myString.a JsonNode/liblib_JsonNode.a JsonParser/liblib_JsonParser.a || JsonNode/liblib_JsonNode.a JsonParser/liblib_JsonParser.a myString/liblib_myString.a test/liblib_test.a
   FLAGS = -g
-  LINK_LIBRARIES = test/liblib_test.a  myString/liblib_myString.a  JsonNode/liblib_JsonNode.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = test/liblib_test.a  myString/liblib_myString.a  JsonNode/liblib_JsonNode.a  JsonParser/liblib_JsonParser.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\json-demo.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -111,6 +111,13 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_lib_test: phony || test/CMakeFiles/lib_test.dir
 
+build test/CMakeFiles/lib_test.dir/TestJsonNode.cpp.obj: CXX_COMPILER__lib_test_Debug C$:/Users/yzn/Documents/GitHub/Json-yzn/code/test/TestJsonNode.cpp || cmake_object_order_depends_target_lib_test
+  DEP_FILE = test\CMakeFiles\lib_test.dir\TestJsonNode.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -IC:/Users/yzn/Documents/GitHub/Json-yzn/code/./test
+  OBJECT_DIR = test\CMakeFiles\lib_test.dir
+  OBJECT_FILE_DIR = test\CMakeFiles\lib_test.dir
+
 build test/CMakeFiles/lib_test.dir/test.cpp.obj: CXX_COMPILER__lib_test_Debug C$:/Users/yzn/Documents/GitHub/Json-yzn/code/test/test.cpp || cmake_object_order_depends_target_lib_test
   DEP_FILE = test\CMakeFiles\lib_test.dir\test.cpp.obj.d
   FLAGS = -g -std=gnu++14
@@ -126,7 +133,7 @@ build test/CMakeFiles/lib_test.dir/test.cpp.obj: CXX_COMPILER__lib_test_Debug C$
 #############################################
 # Link the static library test\liblib_test.a
 
-build test/liblib_test.a: CXX_STATIC_LIBRARY_LINKER__lib_test_Debug test/CMakeFiles/lib_test.dir/test.cpp.obj
+build test/liblib_test.a: CXX_STATIC_LIBRARY_LINKER__lib_test_Debug test/CMakeFiles/lib_test.dir/TestJsonNode.cpp.obj test/CMakeFiles/lib_test.dir/test.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = test\CMakeFiles\lib_test.dir
   POST_BUILD = cd .
@@ -313,17 +320,81 @@ build JsonNode/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 build JsonNode/rebuild_cache: phony JsonNode/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/yzn/Documents/GitHub/Json-yzn/code/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target lib_JsonParser
+
+
+#############################################
+# Order-only phony target for lib_JsonParser
+
+build cmake_object_order_depends_target_lib_JsonParser: phony || JsonParser/CMakeFiles/lib_JsonParser.dir
+
+build JsonParser/CMakeFiles/lib_JsonParser.dir/JsonParser.cpp.obj: CXX_COMPILER__lib_JsonParser_Debug C$:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonParser/JsonParser.cpp || cmake_object_order_depends_target_lib_JsonParser
+  DEP_FILE = JsonParser\CMakeFiles\lib_JsonParser.dir\JsonParser.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -IC:/Users/yzn/Documents/GitHub/Json-yzn/code/./test -IC:/Users/yzn/Documents/GitHub/Json-yzn/code/./myString -IC:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonNode -IC:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonParser
+  OBJECT_DIR = JsonParser\CMakeFiles\lib_JsonParser.dir
+  OBJECT_FILE_DIR = JsonParser\CMakeFiles\lib_JsonParser.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target lib_JsonParser
+
+
+#############################################
+# Link the static library JsonParser\liblib_JsonParser.a
+
+build JsonParser/liblib_JsonParser.a: CXX_STATIC_LIBRARY_LINKER__lib_JsonParser_Debug JsonParser/CMakeFiles/lib_JsonParser.dir/JsonParser.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = JsonParser\CMakeFiles\lib_JsonParser.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = JsonParser\liblib_JsonParser.a
+  TARGET_PDB = lib_JsonParser.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build JsonParser/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug\JsonParser && "C:\Program Files\JetBrains\CLion 2022.1.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build JsonParser/edit_cache: phony JsonParser/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build JsonParser/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug\JsonParser && "C:\Program Files\JetBrains\CLion 2022.1.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\yzn\Documents\GitHub\Json-yzn\code -BC:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build JsonParser/rebuild_cache: phony JsonParser/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
 
 build json-demo: phony json-demo.exe
 
 build lib_JsonNode: phony JsonNode/liblib_JsonNode.a
 
+build lib_JsonParser: phony JsonParser/liblib_JsonParser.a
+
 build lib_myString: phony myString/liblib_myString.a
 
 build lib_test: phony test/liblib_test.a
 
 build liblib_JsonNode.a: phony JsonNode/liblib_JsonNode.a
+
+build liblib_JsonParser.a: phony JsonParser/liblib_JsonParser.a
 
 build liblib_myString.a: phony myString/liblib_myString.a
 
@@ -337,7 +408,7 @@ build liblib_test.a: phony test/liblib_test.a
 #############################################
 # Folder: C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug
 
-build all: phony json-demo.exe test/all myString/all JsonNode/all
+build all: phony json-demo.exe test/all myString/all JsonNode/all JsonParser/all
 
 # =============================================================================
 
@@ -345,6 +416,13 @@ build all: phony json-demo.exe test/all myString/all JsonNode/all
 # Folder: C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonNode
 
 build JsonNode/all: phony JsonNode/liblib_JsonNode.a
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonParser
+
+build JsonParser/all: phony JsonParser/liblib_JsonParser.a
 
 # =============================================================================
 
@@ -367,14 +445,14 @@ build test/all: phony test/liblib_test.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../JsonNode/CMakeLists.txt ../myString/CMakeLists.txt ../test/CMakeLists.txt C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeCXXCompiler.cmake CMakeFiles/3.22.3/CMakeRCCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../JsonNode/CMakeLists.txt ../JsonParser/CMakeLists.txt ../myString/CMakeLists.txt ../test/CMakeLists.txt C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeCXXCompiler.cmake CMakeFiles/3.22.3/CMakeRCCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../JsonNode/CMakeLists.txt ../myString/CMakeLists.txt ../test/CMakeLists.txt C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeCXXCompiler.cmake CMakeFiles/3.22.3/CMakeRCCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../JsonNode/CMakeLists.txt ../JsonParser/CMakeLists.txt ../myString/CMakeLists.txt ../test/CMakeLists.txt C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.1.1/bin/cmake/win/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.22.3/CMakeCCompiler.cmake CMakeFiles/3.22.3/CMakeCXXCompiler.cmake CMakeFiles/3.22.3/CMakeRCCompiler.cmake CMakeFiles/3.22.3/CMakeSystem.cmake: phony
 
 
 #############################################

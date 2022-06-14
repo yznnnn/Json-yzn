@@ -153,6 +153,9 @@
 		},
 		{
 			"path" : "JsonNode/CMakeLists.txt"
+		},
+		{
+			"path" : "JsonParser/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

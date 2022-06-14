@@ -4,7 +4,7 @@
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
-    yzn::testForJsonNode();
+    yzn::test();
 
     return 0;
 }
