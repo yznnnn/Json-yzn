@@ -29,13 +29,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 28,
+				"line" : 24,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 29,
+				"line" : 25,
 				"parent" : 0
 			},
 			{
@@ -54,12 +54,6 @@
 				"command" : 2,
 				"file" : 0,
 				"line" : 20,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 24,
 				"parent" : 0
 			}
 		]
@@ -84,14 +78,10 @@
 				},
 				{
 					"backtrace" : 4,
-					"path" : "C:/Users/yzn/Documents/GitHub/Json-yzn/code/./myString"
-				},
-				{
-					"backtrace" : 5,
 					"path" : "C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonNode"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 5,
 					"path" : "C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonParser"
 				}
 			],
@@ -118,10 +108,6 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "lib_myString::@843f0c40ce000579d36b"
-		},
-		{
-			"backtrace" : 2,
 			"id" : "lib_JsonNode::@7c530decee1889ecd2e7"
 		},
 		{
@@ -145,11 +131,6 @@
 			{
 				"backtrace" : 2,
 				"fragment" : "test\\liblib_test.a",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 2,
-				"fragment" : "myString\\liblib_myString.a",
 				"role" : "libraries"
 			},
 			{

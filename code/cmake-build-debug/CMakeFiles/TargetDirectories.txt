@@ -4,9 +4,6 @@ C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/CMakeFiles/rebuild
 C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/test/CMakeFiles/lib_test.dir
 C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/test/CMakeFiles/edit_cache.dir
 C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/test/CMakeFiles/rebuild_cache.dir
-C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/myString/CMakeFiles/lib_myString.dir
-C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/myString/CMakeFiles/edit_cache.dir
-C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/myString/CMakeFiles/rebuild_cache.dir
 C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonNode/CMakeFiles/lib_JsonNode.dir
 C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonNode/CMakeFiles/edit_cache.dir
 C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonNode/CMakeFiles/rebuild_cache.dir

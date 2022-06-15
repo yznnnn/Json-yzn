@@ -4,25 +4,25 @@
 
 #ifndef JSON_DEMO_JSONSTRINGNODE_H
 #define JSON_DEMO_JSONSTRINGNODE_H
-#include "../myString/myString.h"
 #include "JsonNode.h"
+#include <iomanip>// std::quoted()
+#include <string>
+#include <utility>
 namespace yzn {
 
     class JsonStringNode : public JsonNode {
     private:
-        myString value;
+        std::string value;
 
     public:
         JsonStringNode() = default;
 
-        explicit JsonStringNode(const char *input_str) {
-            this->value = input_str;
-        }
+        explicit JsonStringNode(const char *input_str) : value(input_str) {}
 
-        explicit JsonStringNode(const myString &input_myString_ob) {
-            this->value = input_myString_ob;// 深拷贝
-            // TODO 考虑移动语义
-        }
+        explicit JsonStringNode(const std::string &input_string_ob) : value(input_string_ob) {}
+
+        explicit JsonStringNode(std::string &&input_string_ob) : value(std::move(input_string_ob)) {}
+
 
         JsonNodeType getType() override { return JsonNodeType::TYPE_STRING; }
         const void *getValue() const override { return &this->value; }

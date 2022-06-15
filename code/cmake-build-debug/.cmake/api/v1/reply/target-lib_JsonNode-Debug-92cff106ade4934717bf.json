@@ -44,12 +44,6 @@
 				"file" : 1,
 				"line" : 16,
 				"parent" : 2
-			},
-			{
-				"command" : 1,
-				"file" : 1,
-				"line" : 20,
-				"parent" : 2
 			}
 		]
 	},
@@ -73,10 +67,6 @@
 				},
 				{
 					"backtrace" : 4,
-					"path" : "C:/Users/yzn/Documents/GitHub/Json-yzn/code/./myString"
-				},
-				{
-					"backtrace" : 5,
 					"path" : "C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonNode"
 				}
 			],

@@ -10,8 +10,7 @@
 					[
 						1,
 						2,
-						3,
-						4
+						3
 					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
@@ -35,21 +34,6 @@
 					"parentIndex" : 0,
 					"projectIndex" : 0,
 					"source" : "test",
-					"targetIndexes" : 
-					[
-						4
-					]
-				},
-				{
-					"build" : "myString",
-					"jsonFile" : "directory-myString-Debug-a04b1bba43d71c286645.json",
-					"minimumCMakeVersion" : 
-					{
-						"string" : "3.22"
-					},
-					"parentIndex" : 0,
-					"projectIndex" : 0,
-					"source" : "myString",
 					"targetIndexes" : 
 					[
 						3
@@ -95,8 +79,7 @@
 						0,
 						1,
 						2,
-						3,
-						4
+						3
 					],
 					"name" : "json-demo",
 					"targetIndexes" : 
@@ -104,8 +87,7 @@
 						0,
 						1,
 						2,
-						3,
-						4
+						3
 					]
 				}
 			],
@@ -114,29 +96,22 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "json-demo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-json-demo-Debug-28a11d70abc51232cece.json",
+					"jsonFile" : "target-json-demo-Debug-9e0562a437e377f94514.json",
 					"name" : "json-demo",
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 3,
+					"directoryIndex" : 2,
 					"id" : "lib_JsonNode::@7c530decee1889ecd2e7",
-					"jsonFile" : "target-lib_JsonNode-Debug-b4a1aaed7def39d59903.json",
+					"jsonFile" : "target-lib_JsonNode-Debug-92cff106ade4934717bf.json",
 					"name" : "lib_JsonNode",
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 4,
+					"directoryIndex" : 3,
 					"id" : "lib_JsonParser::@3252e5e7c2fd5cc67d4b",
-					"jsonFile" : "target-lib_JsonParser-Debug-2f4b32359e093101e4ce.json",
+					"jsonFile" : "target-lib_JsonParser-Debug-494066fc38e40bd6a4fe.json",
 					"name" : "lib_JsonParser",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 2,
-					"id" : "lib_myString::@843f0c40ce000579d36b",
-					"jsonFile" : "target-lib_myString-Debug-7c5d9f7630d9fac2f01f.json",
-					"name" : "lib_myString",
 					"projectIndex" : 0
 				},
 				{

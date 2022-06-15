@@ -10,7 +10,6 @@
 #include "../JsonNode/JsonNumberNode.h"
 #include "../JsonNode/JsonStringNode.h"
 #include "../JsonNode/JsonTrueNode.h"
-#include "../myString/myString.h"
 namespace yzn {
 
     class TestJsonNode {

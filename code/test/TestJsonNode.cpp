@@ -58,28 +58,42 @@ namespace yzn {
     static void test_JsonStringNode() {
         std::cout << std::endl;
 
-        JsonStringNode node;
-        std::cout << node.getType()
-                  << "\t\"" << *((myString *) node.getValue()) << '\"' << std::endl
+        JsonStringNode node_0;
+        std::cout << node_0.getType()
+                  << "\t" << std::quoted(*((std::string *) node_0.getValue())) << std::endl
                   << std::endl;
 
         JsonStringNode node_1("hello");
         std::cout << node_1.getType()
-                  << "\t\"" << *((myString *) node_1.getValue()) << '\"' << std::endl
+                  << "\t" << std::quoted(*((std::string *) node_1.getValue())) << std::endl
                   << std::endl;
 
-        myString str_0("apple");
+        std::string str_0("apple");
         JsonStringNode node_2(str_0);
         std::cout << node_2.getType()
-                  << "\t\"" << *((myString *) node_2.getValue()) << '\"' << std::endl
+                  << "\t" << std::quoted(*((std::string *) node_2.getValue())) << std::endl;
+        std::cout << "str_0  : " << (void *) str_0.data() << "\t" << std::quoted(str_0) << std::endl
+                  << "node_2 : " << (void *) (*((std::string *) node_2.getValue())).data() << "\t" << std::quoted(*((std::string *) node_2.getValue())) << std::endl
                   << std::endl;
 
-        myString str_1("break");
-        JsonNode *node_ptr = new JsonStringNode(str_1);
-        std::cout << node_ptr->getType()
-                  << "\t\"" << *((myString *) node_ptr->getValue()) << '\"' << std::endl
+
+        // 移动语义测试
+        std::string str_1("Replaces the contents with a copy of str. If *this and str are the same object, this function has no effect.");
+        std::cout << "str_1  : " << (void *) str_1.data() << "\t" << std::quoted(str_1) << std::endl;
+
+        JsonNode *node_3_ptr = new JsonStringNode(str_1);
+        std::cout << node_3_ptr->getType()
+                  << "\t" << std::quoted(*((std::string *) node_3_ptr->getValue())) << std::endl;
+        std::cout << "str_1  : " << (void *) str_1.data() << "\t" << std::quoted(str_1) << std::endl
+                  << "node_3 : " << (void *) (*((std::string *) node_3_ptr->getValue())).data() << "\t" << std::quoted(*((std::string *) node_3_ptr->getValue())) << std::endl
                   << std::endl;
-        delete node_ptr;
+
+        JsonNode *node_4_ptr = new JsonStringNode(std::move(str_1));
+        std::cout << node_4_ptr->getType()
+                  << "\t" << std::quoted(*((std::string *) node_4_ptr->getValue())) << std::endl;
+        std::cout << "str_1  : " << (void *) str_1.data() << "\t" << std::quoted(str_1) << std::endl
+                  << "node_4 : " << (void *) (*((std::string *) node_4_ptr->getValue())).data() << "\t" << std::quoted(*((std::string *) node_4_ptr->getValue())) << std::endl
+                  << std::endl;
     }
 
 

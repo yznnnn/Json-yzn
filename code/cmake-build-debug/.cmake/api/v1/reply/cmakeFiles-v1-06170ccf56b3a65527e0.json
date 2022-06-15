@@ -149,9 +149,6 @@
 			"path" : "test/CMakeLists.txt"
 		},
 		{
-			"path" : "myString/CMakeLists.txt"
-		},
-		{
 			"path" : "JsonNode/CMakeLists.txt"
 		},
 		{
