@@ -29,6 +29,80 @@ namespace yzn {
         TEST_LITERAL(JsonNodeType::TYPE_FALSE, "  \t     false    \r   ");
     }
 
+    static void Test_Parse_NUMBER() {
+        TEST_NUMBER(0.0, "0");
+        TEST_NUMBER(0.0, "-0");
+        TEST_NUMBER(0.0, "-0.0");
+        TEST_NUMBER(1.0, "1");
+        TEST_NUMBER(-1.0, "-1");
+        TEST_NUMBER(1.5, "1.5");
+        TEST_NUMBER(-1.5, "-1.5");
+        TEST_NUMBER(3.1416, "3.1416");
+        TEST_NUMBER(1E10, "1E10");
+        TEST_NUMBER(1e10, "1e10");
+        TEST_NUMBER(1E+10, "1E+10");
+        TEST_NUMBER(1E-10, "1E-10");
+        TEST_NUMBER(-1E10, "-1E10");
+        TEST_NUMBER(-1e10, "-1e10");
+        TEST_NUMBER(-1E+10, "-1E+10");
+        TEST_NUMBER(-1E-10, "-1E-10");
+        TEST_NUMBER(1.234E+10, "1.234E+10");
+        TEST_NUMBER(1.234E-10, "1.234E-10");
+        TEST_NUMBER(0.0, "1e-10000"); /* must underflow */
+
+        TEST_NUMBER(1.0000000000000002,
+                    "1.0000000000000002"); /* the smallest number > 1 */
+        TEST_NUMBER(4.9406564584124654e-324,
+                    "4.9406564584124654e-324"); /* minimum denormal */
+        TEST_NUMBER(-4.9406564584124654e-324, "-4.9406564584124654e-324");
+        TEST_NUMBER(2.2250738585072009e-308,
+                    "2.2250738585072009e-308"); /* Max subnormal double */
+        TEST_NUMBER(-2.2250738585072009e-308, "-2.2250738585072009e-308");
+        TEST_NUMBER(2.2250738585072014e-308,
+                    "2.2250738585072014e-308"); /* Min normal positive double */
+        TEST_NUMBER(-2.2250738585072014e-308, "-2.2250738585072014e-308");
+        TEST_NUMBER(1.7976931348623157e+308,
+                    "1.7976931348623157e+308"); /* Max double */
+        TEST_NUMBER(-1.7976931348623157e+308, "-1.7976931348623157e+308");
+    }
+
+
+    static void Test_Parse_Error_ONLY_WS() {
+        TEST_ERROR(JsonParserStateCode::ONLY_WS, "  \n  \t  \r  ");
+    }
+
+    static void Test_Parse_Error_INVALID_VALUE() {
+        TEST_ERROR(JsonParserStateCode::INVALID_VALUE, "   \n   ? \t  \r  ");
+
+        /* Invalid Literal */
+        TEST_ERROR(JsonParserStateCode::INVALID_VALUE, "   \n   nul \t  \r  ");
+        TEST_ERROR(JsonParserStateCode::INVALID_VALUE, "   \n   ture \t  \r  ");
+        TEST_ERROR(JsonParserStateCode::INVALID_VALUE, "   \n   fales \t  \r  ");
+
+        /* Invalid Number */
+        TEST_ERROR(JsonParserStateCode::INVALID_VALUE, "+0");
+        TEST_ERROR(JsonParserStateCode::INVALID_VALUE, "+1");
+        TEST_ERROR(JsonParserStateCode::INVALID_VALUE, ".123"); /* at least one digit before '.' */
+        TEST_ERROR(JsonParserStateCode::INVALID_VALUE, "1.");   /* at least one digit after '.' */
+        TEST_ERROR(JsonParserStateCode::INVALID_VALUE, "INF");
+        TEST_ERROR(JsonParserStateCode::INVALID_VALUE, "inf");
+        TEST_ERROR(JsonParserStateCode::INVALID_VALUE, "NAN");
+        TEST_ERROR(JsonParserStateCode::INVALID_VALUE, "nan");
+    }
+
+    static void Test_Parse_Error_SURPLUS() {
+        TEST_ERROR(JsonParserStateCode::SURPLUS, "   \n   null null \t  \r  ");
+
+        /* invalid number */
+        TEST_ERROR(JsonParserStateCode::SURPLUS, "0123"); /* after zero should be '.' or nothing */
+        TEST_ERROR(JsonParserStateCode::SURPLUS, "0x0");
+        TEST_ERROR(JsonParserStateCode::SURPLUS, "0x123");
+    }
+
+    static void Test_Parse_Error_OUT_OF_RANGE() {
+        TEST_ERROR(JsonParserStateCode::OUT_OF_RANGE, "1e309");
+        TEST_ERROR(JsonParserStateCode::OUT_OF_RANGE, "-1e309");
+    }
 
     void TestJsonParser::test() {
         std::cout << "----------------------------------[ test JsonNode ]----------------------------------" << std::endl;
@@ -36,6 +110,13 @@ namespace yzn {
         Test_Parse_NULL();
         Test_Parse_TRUE();
         Test_Parse_FALSE();
+        Test_Parse_NUMBER();
+
+
+        Test_Parse_Error_ONLY_WS();
+        Test_Parse_Error_INVALID_VALUE();
+        Test_Parse_Error_SURPLUS();
+        Test_Parse_Error_OUT_OF_RANGE();
 
         std::cout << std::endl
                   << "-------------------------------------------------------------------------------------" << std::endl
