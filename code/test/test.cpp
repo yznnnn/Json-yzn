@@ -3,6 +3,7 @@
 //
 
 #include "test.h"
+#include <string>
 
 namespace yzn {
     void test() {

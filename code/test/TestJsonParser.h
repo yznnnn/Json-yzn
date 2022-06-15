@@ -36,6 +36,7 @@ namespace yzn {
     EQUAL_STATISTICS(expect_number, actual_number, \
                      (expect_number) == (actual_number))
 
+
     /**
      * 测试 literal(null \ true \ false) 类型的 parse
      */
@@ -69,12 +70,38 @@ namespace yzn {
             EQUAL_NUMBER(expect_value, *((double *) node_ptr->getValue()));      \
         } else {                                                                 \
             EQUAL_NUMBER(JsonNodeType::TYPE_NUMBER, JsonNodeType::TYPE_UNKNOWN); \
-            EQUAL_NUMBER(expect_value, NAN);                                     \
         }                                                                        \
         delete node_ptr;                                                         \
         node_ptr = nullptr;                                                      \
     } while (0)
 
+
+/**
+ * 比较字符串类型的结果
+ */
+#define EQUAL_STRING(expect_string, actual_string) \
+    EQUAL_STATISTICS(expect_string, actual_string, \
+                     (expect_string) == (actual_string))
+
+
+    /**
+     * 测试 string 类型的 parse
+     */
+#define TEST_STRING(expect_value, json_text)                                     \
+    do {                                                                         \
+        JsonNode *node_ptr = nullptr;                                            \
+        JsonParser parser{};                                                     \
+        JsonParserStateCode state_code = parser.parse(&node_ptr, json_text);     \
+        EQUAL_NUMBER(JsonParserStateCode::OK, state_code);                       \
+        if (node_ptr != nullptr) {                                               \
+            EQUAL_NUMBER(JsonNodeType::TYPE_STRING, node_ptr->getType());        \
+            EQUAL_STRING(expect_value, *((std::string *) node_ptr->getValue())); \
+        } else {                                                                 \
+            EQUAL_NUMBER(JsonNodeType::TYPE_STRING, JsonNodeType::TYPE_UNKNOWN); \
+        }                                                                        \
+        delete node_ptr;                                                         \
+        node_ptr = nullptr;                                                      \
+    } while (0)
 
     /**
      * 测试 解析出现错误时是否返回正确的状态码

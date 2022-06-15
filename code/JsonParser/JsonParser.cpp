@@ -52,7 +52,6 @@ namespace yzn {
         return state_code;
     }
 
-
     void JsonParser::parseWhitespace() {
         while (*(this->cur_char) == ' ' || *(this->cur_char) == '\t' ||
                *(this->cur_char) == '\n' || *(this->cur_char) == '\r') {
@@ -68,6 +67,8 @@ namespace yzn {
                 return this->parseLiterals(node_pp, "true", JsonNodeType::TYPE_TRUE);
             case 'f':
                 return this->parseLiterals(node_pp, "false", JsonNodeType::TYPE_FALSE);
+            case '\"':
+                return this->parseString(node_pp);
             case '\0':
                 return JsonParserStateCode::ONLY_WS;
             default:
@@ -162,6 +163,110 @@ namespace yzn {
         *node_pp = new JsonNumberNode(value);
         this->cur_char = p;
         return JsonParserStateCode::OK;
+    }
+
+    JsonParserStateCode JsonParser::parseString(JsonNode **node_pp) {
+        assert(*(this->cur_char) == '\"');// 再次检验开头字符
+
+        this->cur_char++;
+        std::string temp_string;
+        const char *p = this->cur_char;
+        unsigned H, L;
+
+        while (true) {
+            char ch = *p++;
+            switch (ch) {
+                case '\"':
+                    *node_pp = new JsonStringNode(std::move(temp_string));
+                    this->cur_char = p;
+                    return JsonParserStateCode::OK;
+                case '\0':
+                    return JsonParserStateCode::INVALID_STRING_ESCAPE;
+                case '\\':
+                    switch (*p++) {
+                        case '\"':
+                            temp_string += '\"';
+                            break;
+                        case '\\':
+                            temp_string += '\\';
+                            break;
+                        case '/':
+                            temp_string += '/';
+                            break;
+                        case 'b':
+                            temp_string += '\b';
+                            break;
+                        case 'f':
+                            temp_string += '\f';
+                            break;
+                        case 'n':
+                            temp_string += '\n';
+                            break;
+                        case 'r':
+                            temp_string += '\r';
+                            break;
+                        case 't':
+                            temp_string += '\t';
+                            break;
+                        case 'u':
+                            if (!(p = JsonParser::parseHEX4(p, &H))) { return JsonParserStateCode::INVALID_UNICODE_HEX; }
+                            if (H >= 0xD800 && H <= 0xDBFF) /* 为高代理项，再次解析一个 \u 字符 */
+                            {
+                                if (*p++ != '\\') { return JsonParserStateCode::INVALID_UNICODE_SURROGATE; }
+                                if (*p++ != 'u') { return JsonParserStateCode::INVALID_UNICODE_SURROGATE; }
+                                if (!(p = JsonParser::parseHEX4(p, &L))) { return JsonParserStateCode::INVALID_UNICODE_HEX; }
+                                if (L < 0xDC00 || L > 0xDFFF) { return JsonParserStateCode::INVALID_UNICODE_SURROGATE; }
+                                H = (((H - 0xD800) << 10) | (L - 0xDC00)) + 0x10000;
+                            }
+                            JsonParser::encodeUTF8(temp_string, H);
+                            break;
+                        default:
+                            return JsonParserStateCode::INVALID_STRING_ESCAPE;
+                    }
+                    break;
+                default:
+                    if ((unsigned char) ch < 0x20) { return JsonParserStateCode::INVALID_STRING_CHAR; }
+                    temp_string += ch;
+            }
+        }
+    }
+
+    const char *JsonParser::parseHEX4(const char *p, unsigned int *u) {
+        int i;
+        *u = 0;
+        for (i = 0; i < 4; i++) {
+            char ch = *p++;
+            *u <<= 4;
+            if (ch >= '0' && ch <= '9') {
+                *u |= ch - '0';
+            } else if (ch >= 'A' && ch <= 'F') {
+                *u |= ch - ('A' - 10);
+            } else if (ch >= 'a' && ch <= 'f') {
+                *u |= ch - ('a' - 10);
+            } else {
+                return nullptr;
+            }
+        }
+        return p;
+    }
+
+    void JsonParser::encodeUTF8(std::string &temp_string, unsigned int u) {
+        if (u <= 0x7F) {
+            temp_string += (char) (u & 0xFF);
+        } else if (u <= 0x7FF) {
+            temp_string += (char) (0xC0 | ((u >> 6) & 0xFF));
+            temp_string += (char) (0x80 | (u & 0x3F));
+        } else if (u <= 0xFFFF) {
+            temp_string += (char) (0xE0 | ((u >> 12) & 0xFF));
+            temp_string += (char) (0x80 | ((u >> 6) & 0x3F));
+            temp_string += (char) (0x80 | (u & 0x3F));
+        } else {
+            assert(u <= 0x10FFFF);
+            temp_string += (char) (0xF0 | ((u >> 18) & 0xFF));
+            temp_string += (char) (0x80 | ((u >> 12) & 0x3F));
+            temp_string += (char) (0x80 | ((u >> 6) & 0x3F));
+            temp_string += (char) (0x80 | (u & 0x3F));
+        }
     }
 
 

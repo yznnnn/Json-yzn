@@ -8,6 +8,7 @@
 #include "../JsonNode/JsonNode.h"
 #include "../JsonNode/JsonNullNode.h"
 #include "../JsonNode/JsonNumberNode.h"
+#include "../JsonNode/JsonStringNode.h"
 #include "../JsonNode/JsonTrueNode.h"
 #include <cassert>
 #include <cmath>
@@ -46,7 +47,10 @@ namespace yzn {
                                           const char *expect_literals,
                                           JsonNodeType expect_type);
         JsonParserStateCode parseNumber(JsonNode **node_pp);
-        JsonParserStateCode parseString();
+        JsonParserStateCode parseString(JsonNode **node_pp);
+
+        static const char* parseHEX4(const char *p, unsigned int *u);
+        static void encodeUTF8(std::string& temp_string, unsigned int u);
 
     public:
         JsonParserStateCode parse(JsonNode **node_pp,
