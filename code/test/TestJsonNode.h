@@ -10,6 +10,8 @@
 #include "../JsonNode/JsonNumberNode.h"
 #include "../JsonNode/JsonStringNode.h"
 #include "../JsonNode/JsonTrueNode.h"
+#include "../JsonNode/JsonArrayNode.h"
+#include <vector>
 namespace yzn {
 
     class TestJsonNode {

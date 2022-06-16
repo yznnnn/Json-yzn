@@ -17,6 +17,8 @@ namespace yzn {
 
         JsonNodeType getType() override { return JsonNodeType::TYPE_NUMBER; }
         const void *getValue() const override { return &this->value; }
+
+        void print() const override { std::cout << this->value; }
     };
 
 }// namespace yzn

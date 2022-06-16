@@ -7,13 +7,6 @@ int main() {
     yzn::test();
 
 
-//    std::string s_0("Hello");
-//    s_0 += '\0';
-//    s_0 += "World";
-//    const char *s_1 = "Hello\0World";
-//    std::cout << strlen(s_1) << std::endl;
-
-
     //    // 转换构造
     //    std::string s0 = "Replaces the contents with a copy of str. If *this and str are the same object, this function has no effect.";
     //    std::cout << "s0: " << (void *) s0.data() << "\t" << std::quoted(s0) << std::endl

@@ -10,6 +10,7 @@ namespace yzn {
     class JsonFalseNode : public JsonNode {
     public:
         JsonNodeType getType() override { return JsonNodeType::TYPE_FALSE; }
+        void print() const override { std::cout << "false"; }
     };
 
 }// namespace yzn

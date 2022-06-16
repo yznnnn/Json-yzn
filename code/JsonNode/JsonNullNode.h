@@ -5,6 +5,7 @@
 #ifndef JSON_DEMO_JSONNULLNODE_H
 #define JSON_DEMO_JSONNULLNODE_H
 #include "JsonNode.h"
+#include <iostream>
 
 
 namespace yzn {
@@ -12,6 +13,8 @@ namespace yzn {
     class JsonNullNode : public JsonNode {
     public:
         JsonNodeType getType() override { return JsonNodeType::TYPE_NULL; }
+
+        void print() const override { std::cout << "null"; }
     };
 
 }// namespace yzn

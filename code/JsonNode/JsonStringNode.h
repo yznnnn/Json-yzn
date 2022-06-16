@@ -18,14 +18,13 @@ namespace yzn {
         JsonStringNode() = default;
 
         explicit JsonStringNode(const char *input_str) : value(input_str) {}
-
         explicit JsonStringNode(const std::string &input_string_ob) : value(input_string_ob) {}
-
         explicit JsonStringNode(std::string &&input_string_ob) : value(std::move(input_string_ob)) {}
 
 
         JsonNodeType getType() override { return JsonNodeType::TYPE_STRING; }
         const void *getValue() const override { return &this->value; }
+        void print() const override { std::cout << std::quoted(this->value); }
     };
 
 }// namespace yzn

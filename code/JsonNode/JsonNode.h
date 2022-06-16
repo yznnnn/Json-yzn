@@ -27,6 +27,8 @@ namespace yzn {
 
         virtual const void *getValue() const { return nullptr; }
 
+        virtual void print() const {}
+
         virtual ~JsonNode() = default;
     };
 
