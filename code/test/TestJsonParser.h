@@ -8,6 +8,7 @@
 #include "../JsonParser/JsonParser.h"
 #include <cmath>
 #include <iostream>
+#include <vector>
 
 namespace yzn {
 

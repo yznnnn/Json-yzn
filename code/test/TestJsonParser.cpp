@@ -92,6 +92,83 @@ namespace yzn {
                     "\"\\ud834\\udd1e\""); /* G clef sign U+1D11E */
     }
 
+    static void Test_Parse_ARRAY() {
+        JsonNode *node_ptr = nullptr;
+        JsonParser parser{};
+        JsonParserStateCode state_code;
+        const char *json_text;
+        size_t expect_element_size;
+
+        /* 测试样例 [] */
+        json_text = "[    ]";
+        expect_element_size = 0;
+        state_code = parser.parse(&node_ptr, json_text);
+        EQUAL_NUMBER(JsonParserStateCode::OK, state_code);
+        if (node_ptr != nullptr) {
+            EQUAL_NUMBER(JsonNodeType::TYPE_ARRAY, node_ptr->getType());
+            size_t real_size = node_ptr->getValue() ? ((std::vector<JsonNode *> *) node_ptr->getValue())->size() : 0;
+            EQUAL_NUMBER(expect_element_size, real_size);
+        } else {
+            EQUAL_NUMBER(JsonNodeType::TYPE_ARRAY, JsonNodeType::TYPE_UNKNOWN);
+        }
+        delete node_ptr;
+        node_ptr = nullptr;
+
+
+        /* 测试样例： [ null , false , true , 123 , \"abc\" ] */
+        json_text = "[null , false , true , 123 , \"abc\"]";
+        expect_element_size = 5;
+        state_code = parser.parse(&node_ptr, json_text);
+        EQUAL_NUMBER(JsonParserStateCode::OK, state_code);
+        if (node_ptr != nullptr) {
+            EQUAL_NUMBER(JsonNodeType::TYPE_ARRAY, node_ptr->getType());
+            size_t real_size = node_ptr->getValue() ? ((std::vector<JsonNode *> *) node_ptr->getValue())->size() : 0;
+            EQUAL_NUMBER(expect_element_size, real_size);
+
+            const auto *vec_ptr = (std::vector<JsonNode *> *) node_ptr->getValue();
+            EQUAL_NUMBER(JsonNodeType::TYPE_NULL, (*vec_ptr)[0]->getType());
+            EQUAL_NUMBER(JsonNodeType::TYPE_FALSE, (*vec_ptr)[1]->getType());
+            EQUAL_NUMBER(JsonNodeType::TYPE_TRUE, (*vec_ptr)[2]->getType());
+            EQUAL_NUMBER(JsonNodeType::TYPE_NUMBER, (*vec_ptr)[3]->getType());
+            EQUAL_NUMBER(123, *((double *) (*vec_ptr)[3]->getValue()));
+            EQUAL_NUMBER(JsonNodeType::TYPE_STRING, (*vec_ptr)[4]->getType());
+            EQUAL_NUMBER("abc", *((std::string *) (*vec_ptr)[4]->getValue()));
+
+        } else {
+            EQUAL_NUMBER(JsonNodeType::TYPE_ARRAY, JsonNodeType::TYPE_UNKNOWN);
+        }
+        delete node_ptr;
+        node_ptr = nullptr;
+
+        /* 测试样例： [ [ ] , [ 0 ] , [ 0 , 1 ] , [ 0 , 1 , 2 ] ] */
+        json_text = "[ [ ] , [ 0 ] , [ 0 , 1 ] , [ 0 , 1 , 2 ] ]";
+        expect_element_size = 4;
+        state_code = parser.parse(&node_ptr, json_text);
+        EQUAL_NUMBER(JsonParserStateCode::OK, state_code);
+        if (node_ptr != nullptr) {
+            EQUAL_NUMBER(JsonNodeType::TYPE_ARRAY, node_ptr->getType());
+            size_t real_size = node_ptr->getValue() ? ((std::vector<JsonNode *> *) node_ptr->getValue())->size() : 0;
+            EQUAL_NUMBER(expect_element_size, real_size);
+
+            const auto *vec_ptr = (std::vector<JsonNode *> *) node_ptr->getValue();
+            for (size_t i = 0; i < expect_element_size; i++) {
+                EQUAL_NUMBER(JsonNodeType::TYPE_ARRAY, (*vec_ptr)[i]->getType());
+                size_t temp_real_size = (*vec_ptr)[i]->getValue() ? ((std::vector<JsonNode *> *) (*vec_ptr)[i]->getValue())->size() : 0;
+                EQUAL_NUMBER(i, temp_real_size);
+                for (size_t j = 0; j < i; j++) {
+                    const auto *temp_vec_ptr = (std::vector<JsonNode *> *) (*vec_ptr)[i]->getValue();
+                    EQUAL_NUMBER(JsonNodeType::TYPE_NUMBER, (*temp_vec_ptr)[j]->getType());
+                    EQUAL_NUMBER(j, *((double *) (*temp_vec_ptr)[j]->getValue()));
+                }
+            }
+        } else {
+            EQUAL_NUMBER(JsonNodeType::TYPE_ARRAY, JsonNodeType::TYPE_UNKNOWN);
+        }
+        delete node_ptr;
+        node_ptr = nullptr;
+    }
+
+
     static void Test_Parse_Error_ONLY_WS() {
         TEST_ERROR(JsonParserStateCode::ONLY_WS, "  \n  \t  \r  ");
     }
@@ -113,6 +190,11 @@ namespace yzn {
         TEST_ERROR(JsonParserStateCode::INVALID_VALUE, "inf");
         TEST_ERROR(JsonParserStateCode::INVALID_VALUE, "NAN");
         TEST_ERROR(JsonParserStateCode::INVALID_VALUE, "nan");
+
+        /* invalid value in array */
+        TEST_ERROR(JsonParserStateCode::INVALID_VALUE, "[1,]");
+        TEST_ERROR(JsonParserStateCode::INVALID_VALUE, "[\"a\", nul]");
+        TEST_ERROR(JsonParserStateCode::INVALID_VALUE, "[[1,false,3],[1, nul]]");
     }
 
     static void Test_Parse_Error_SURPLUS() {
@@ -169,6 +251,16 @@ namespace yzn {
         TEST_ERROR(JsonParserStateCode::INVALID_UNICODE_SURROGATE, "\"\\uD800\\uDBFF\"");
         TEST_ERROR(JsonParserStateCode::INVALID_UNICODE_SURROGATE, "\"\\uD800\\uE000\"");
     }
+
+
+    static void Test_Parse_Error_MISS_COMMA_OR_SQUARE_BRACKET() {
+        TEST_ERROR(JsonParserStateCode::MISS_COMMA_OR_SQUARE_BRACKET, "[1");
+        TEST_ERROR(JsonParserStateCode::MISS_COMMA_OR_SQUARE_BRACKET, "[1}");
+        TEST_ERROR(JsonParserStateCode::MISS_COMMA_OR_SQUARE_BRACKET, "[1 2");
+        TEST_ERROR(JsonParserStateCode::MISS_COMMA_OR_SQUARE_BRACKET, "[[]");
+    }
+
+
     void TestJsonParser::test() {
         std::cout << "----------------------------------[ test JsonNode ]----------------------------------" << std::endl;
 
@@ -177,6 +269,7 @@ namespace yzn {
         Test_Parse_FALSE();
         Test_Parse_NUMBER();
         Test_Parse_STRING();
+        Test_Parse_ARRAY();
 
 
         Test_Parse_Error_ONLY_WS();
@@ -188,6 +281,7 @@ namespace yzn {
         Test_Parse_Error_INVALID_STRING_CHAR();
         Test_Parse_Error_INVALID_UNICODE_HEX();
         Test_Parse_Error_INVALID_UNICODE_SURROGATE();
+        Test_Parse_Error_MISS_COMMA_OR_SQUARE_BRACKET();
 
         std::cout << std::endl
                   << "-------------------------------------------------------------------------------------" << std::endl

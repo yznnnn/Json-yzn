@@ -4,6 +4,7 @@
 
 #ifndef JSON_DEMO_JSONPARSER_H
 #define JSON_DEMO_JSONPARSER_H
+#include "../JsonNode/JsonArrayNode.h"
 #include "../JsonNode/JsonFalseNode.h"
 #include "../JsonNode/JsonNode.h"
 #include "../JsonNode/JsonNullNode.h"
@@ -41,6 +42,15 @@ namespace yzn {
             *node_pp = nullptr;// 避免野指针
         }
 
+        static void deleteNodePtrVector(std::vector<JsonNode *> &vec) {
+            if (!vec.empty()) {
+                for (auto &e: vec) {
+                    delete e;
+                    e = nullptr;
+                }
+            }
+        }
+
         void parseWhitespace();
         JsonParserStateCode parseValue(JsonNode **node_pp);
         JsonParserStateCode parseLiterals(JsonNode **node_pp,
@@ -48,9 +58,10 @@ namespace yzn {
                                           JsonNodeType expect_type);
         JsonParserStateCode parseNumber(JsonNode **node_pp);
         JsonParserStateCode parseString(JsonNode **node_pp);
+        JsonParserStateCode parseArray(JsonNode **node_pp);
 
-        static const char* parseHEX4(const char *p, unsigned int *u);
-        static void encodeUTF8(std::string& temp_string, unsigned int u);
+        static const char *parseHEX4(const char *p, unsigned int *u);
+        static void encodeUTF8(std::string &temp_string, unsigned int u);
 
     public:
         JsonParserStateCode parse(JsonNode **node_pp,

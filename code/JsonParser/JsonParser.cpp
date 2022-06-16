@@ -71,6 +71,8 @@ namespace yzn {
                 return this->parseString(node_pp);
             case '\0':
                 return JsonParserStateCode::ONLY_WS;
+            case '[':
+                return this->parseArray(node_pp);
             default:
                 return this->parseNumber(node_pp);
         }
@@ -267,6 +269,58 @@ namespace yzn {
             temp_string += (char) (0x80 | ((u >> 6) & 0x3F));
             temp_string += (char) (0x80 | (u & 0x3F));
         }
+    }
+
+    JsonParserStateCode JsonParser::parseArray(JsonNode **node_pp) {
+        assert(*(this->cur_char) == '[');// 再次检验开头字符
+        this->cur_char++;
+        JsonParserStateCode state_code;
+
+        // 解析 ws
+        this->parseWhitespace();
+
+        // 解析 空array
+        if (*(this->cur_char) == ']') {
+            *node_pp = new JsonArrayNode();// 创建一个空 array
+            this->cur_char++;
+            return JsonParserStateCode::OK;
+        }
+
+        // 解析 array 元素
+        std::vector<JsonNode *> temp_vec;
+        size_t num = 0;
+        while (true) {
+            JsonNode *temp_node_ptr = nullptr;
+            state_code = this->parseValue(&temp_node_ptr);
+
+            // 当前节点解析失败
+            if (state_code != JsonParserStateCode::OK) {
+                JsonParser::deleteNodePtrVector(temp_vec);
+                return state_code;
+            }
+
+            // 当前节点解析成功，加入 temp_vec
+            num++;
+            temp_vec.push_back(temp_node_ptr);
+
+            // 解析 ws
+            this->parseWhitespace();
+
+            // 解析后续字符
+            if (*(this->cur_char) == ',')// 后续还有元素
+            {
+                this->cur_char++;
+                this->parseWhitespace();
+            } else if (*(this->cur_char) == ']')// 后续没有元素了，保存结果
+            {
+                this->cur_char++;
+                *node_pp = new JsonArrayNode(std::move(temp_vec));// 移动构造
+                return JsonParserStateCode::OK;
+            } else {
+                return JsonParserStateCode::MISS_COMMA_OR_SQUARE_BRACKET;
+            }
+        }
+        return state_code;
     }
 
 

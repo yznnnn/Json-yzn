@@ -23,8 +23,8 @@ namespace yzn {
 
     public:
         JsonArrayNode() = default;
-        JsonArrayNode(const std::vector<JsonNode *> &input_vector_ob) : value(input_vector_ob) {}
-        JsonArrayNode(std::vector<JsonNode *> &&input_vector_ob) : value(std::move(input_vector_ob)) {}
+        explicit JsonArrayNode(const std::vector<JsonNode *> &input_vector_ob) : value(input_vector_ob) {}
+        explicit JsonArrayNode(std::vector<JsonNode *> &&input_vector_ob) : value(std::move(input_vector_ob)) {}
 
         ~JsonArrayNode() override { this->free(); }
 
