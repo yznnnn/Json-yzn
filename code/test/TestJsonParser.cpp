@@ -78,7 +78,7 @@ namespace yzn {
                     "\"\\\" \\\\ \\/ \\b \\f \\n \\r \\t\"");
 
 
-        TEST_STRING("Hello\0World",
+        TEST_STRING(std::string("Hello") + '\0' + "World",// 这里直接用 C-style string 会吞到 '\0'
                     "\"Hello\\u0000World\"");
         TEST_STRING("\x24",
                     "\"\\u0024\""); /* Dollar sign U+0024 */

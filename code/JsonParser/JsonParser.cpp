@@ -181,7 +181,7 @@ namespace yzn {
                     this->cur_char = p;
                     return JsonParserStateCode::OK;
                 case '\0':
-                    return JsonParserStateCode::INVALID_STRING_ESCAPE;
+                    return JsonParserStateCode::MISS_QUOTATION_MARK;
                 case '\\':
                     switch (*p++) {
                         case '\"':
