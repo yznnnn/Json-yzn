@@ -122,9 +122,7 @@ namespace yzn {
         } else {
             if ('1' <= *p && *p <= '9') {
                 p++;
-                while ('0' <= *p && *p <= '9') {
-                    p++;
-                }
+                while ('0' <= *p && *p <= '9') { p++; }
             } else {
                 return JsonParserStateCode::INVALID_VALUE;
             }
@@ -133,26 +131,16 @@ namespace yzn {
         // 解析小数
         if (*p == '.') {
             p++;
-            if (!('0' <= *p && *p <= '9')) {
-                return JsonParserStateCode::INVALID_VALUE;
-            }
-            while ('0' <= *p && *p <= '9') {
-                p++;
-            }
+            if (!('0' <= *p && *p <= '9')) { return JsonParserStateCode::INVALID_VALUE; }
+            while ('0' <= *p && *p <= '9') { p++; }
         }
 
         // 解析指数
         if (*p == 'e' || *p == 'E') {
             p++;
-            if (*p == '+' || *p == '-') {
-                p++;
-            }
-            if (!('0' <= *p && *p <= '9')) {
-                return JsonParserStateCode::INVALID_VALUE;
-            }
-            while ('0' <= *p && *p <= '9') {
-                p++;
-            }
+            if (*p == '+' || *p == '-') { p++; }
+            if (!('0' <= *p && *p <= '9')) { return JsonParserStateCode::INVALID_VALUE; }
+            while ('0' <= *p && *p <= '9') { p++; }
         }
 
         // 计算结果
@@ -320,7 +308,6 @@ namespace yzn {
                 return JsonParserStateCode::MISS_COMMA_OR_SQUARE_BRACKET;
             }
         }
-        return state_code;
     }
 
 
