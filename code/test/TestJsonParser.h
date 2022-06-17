@@ -4,6 +4,7 @@
 
 #ifndef JSON_DEMO_TESTJSONPARSER_H
 #define JSON_DEMO_TESTJSONPARSER_H
+#include "../JsonNode/JsonDict.h"
 #include "../JsonNode/JsonNode.h"
 #include "../JsonParser/JsonParser.h"
 #include <cmath>

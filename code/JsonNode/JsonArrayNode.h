@@ -28,7 +28,7 @@ namespace yzn {
 
         ~JsonArrayNode() override { this->free(); }
 
-        JsonNodeType getType() override { return JsonNodeType::TYPE_ARRAY; }
+        JsonNodeType getType() const override { return JsonNodeType::TYPE_ARRAY; }
         const void *getValue() const override {
             if (this->value.empty()) { return nullptr; }
             return &this->value;

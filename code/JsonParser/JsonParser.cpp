@@ -30,6 +30,12 @@ namespace yzn {
                 return os << "State Code: INVALID_UNICODE_SURROGATE";
             case JsonParserStateCode::MISS_COMMA_OR_SQUARE_BRACKET:
                 return os << "State Code: MISS_COMMA_OR_SQUARE_BRACKET";
+            case JsonParserStateCode::MISS_KEY:
+                return os << "State Code: MISS_KEY";
+            case JsonParserStateCode::MISS_COLON:
+                return os << "State Code: MISS_COLON";
+            case JsonParserStateCode::MISS_COMMA_OR_CURLY_BRACKET:
+                return os << "State Code: MISS_COMMA_OR_CURLY_BRACKET";
         }
     }
 
@@ -73,6 +79,8 @@ namespace yzn {
                 return JsonParserStateCode::ONLY_WS;
             case '[':
                 return this->parseArray(node_pp);
+            case '{':
+                return this->parseObject(node_pp);
             default:
                 return this->parseNumber(node_pp);
         }
@@ -252,6 +260,7 @@ namespace yzn {
             }
         }
     }
+
     JsonParserStateCode JsonParser::parseString_raw(std::string &temp_string) {
         assert(*(this->cur_char) == '\"');// 再次检验开头字符
         this->cur_char++;
@@ -311,6 +320,70 @@ namespace yzn {
                 default:
                     if ((unsigned char) ch < 0x20) { return JsonParserStateCode::INVALID_STRING_CHAR; }
                     temp_string += ch;
+            }
+        }
+    }
+
+    JsonParserStateCode JsonParser::parseObject(JsonNode **node_pp) {
+        assert(*(this->cur_char) == '{');// 再次检验开头字符
+        this->cur_char++;
+        JsonParserStateCode state_code;
+
+        // 解析 ws
+        this->parseWhitespace();
+
+        // 解析 空array
+        if (*(this->cur_char) == '}') {
+            *node_pp = new JsonObjectNode;// 创建一个空 array
+            this->cur_char++;
+            return JsonParserStateCode::OK;
+        }
+
+        // 解析 object 元素
+        std::vector<JsonDict *> temp_vec;
+        size_t num = 0;
+        while (true) {
+            // 解析 key
+            if (*(this->cur_char) != '\"') { return JsonParserStateCode::MISS_KEY; }
+            std::string temp_key_string;
+            state_code = this->parseString_raw(temp_key_string);
+            if (state_code != JsonParserStateCode::OK) { return state_code; }
+
+            // 解析 :
+            this->parseWhitespace();
+            if (*(this->cur_char) != ':') { return JsonParserStateCode::MISS_COLON; }
+            this->cur_char++;
+
+            // 解析 值
+            this->parseWhitespace();
+            JsonNode *temp_node_ptr = nullptr;
+            state_code = this->parseValue(&temp_node_ptr);
+
+            // 当前节点解析失败
+            if (state_code != JsonParserStateCode::OK) {
+                JsonParser::deleteDictPtrVector(temp_vec);
+                return state_code;
+            }
+
+            // 解析成功，加入 temp_vec
+            num++;
+            temp_vec.push_back(new JsonDict(std::move(temp_key_string), temp_node_ptr));
+
+            // 解析 ws
+            this->parseWhitespace();
+
+            // 解析后续字符
+            if (*(this->cur_char) == ',')// 后续还有元素
+            {
+                this->cur_char++;
+                this->parseWhitespace();
+            } else if (*(this->cur_char) == '}')// 后续没有元素了，保存结果
+            {
+                this->cur_char++;
+                *node_pp = new JsonObjectNode(std::move(temp_vec));// 移动构造
+                return JsonParserStateCode::OK;
+            } else {
+                return JsonParserStateCode::MISS_COMMA_OR_CURLY_BRACKET;
             }
         }
     }

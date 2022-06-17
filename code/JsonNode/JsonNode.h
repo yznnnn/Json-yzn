@@ -23,7 +23,7 @@ namespace yzn {
 
     class JsonNode {
     public:
-        virtual JsonNodeType getType() { return JsonNodeType::TYPE_UNKNOWN; }
+        virtual JsonNodeType getType() const{ return JsonNodeType::TYPE_UNKNOWN; }
 
         virtual const void *getValue() const { return nullptr; }
 

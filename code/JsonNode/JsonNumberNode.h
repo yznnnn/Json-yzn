@@ -15,7 +15,7 @@ namespace yzn {
         JsonNumberNode() : value(0) {}
         explicit JsonNumberNode(double input_value) : value(input_value) {}
 
-        JsonNodeType getType() override { return JsonNodeType::TYPE_NUMBER; }
+        JsonNodeType getType() const override { return JsonNodeType::TYPE_NUMBER; }
         const void *getValue() const override { return &this->value; }
 
         void print() const override { std::cout << this->value; }

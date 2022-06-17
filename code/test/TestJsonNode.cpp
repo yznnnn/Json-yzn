@@ -184,11 +184,11 @@ namespace yzn {
         dict_0.print();
         std::cout << std::endl;
 
-        JsonDict dict_1("name",new JsonStringNode("Bob"));
+        JsonDict dict_1("name", new JsonStringNode("Bob"));
         dict_1.print();
         std::cout << std::endl;
 
-        JsonDict dict_2("age",new JsonNumberNode(12));
+        JsonDict dict_2("age", new JsonNumberNode(12));
         dict_2.print();
         std::cout << std::endl;
 
@@ -213,23 +213,46 @@ namespace yzn {
         node_ptr = new JsonTrueNode();
         temp.push_back(node_ptr);
 
-        JsonDict dict_3("array",new JsonArrayNode(std::move(temp)));
+        JsonDict dict_3("array", new JsonArrayNode(std::move(temp)));
         dict_3.print();
         std::cout << std::endl;
     }
 
 
+    static void test_JsonObjectNode() {
+        std::cout << std::endl;
+
+
+        JsonObjectNode node_0;
+        std::cout << node_0.getType() << "\n";
+        node_0.print();
+        std::cout << std::endl
+                  << std::endl;
+
+
+        std::vector<JsonDict *> temp;
+        temp.push_back(new JsonDict("name", new JsonStringNode("Bob")));
+        temp.push_back(new JsonDict("age", new JsonNumberNode(12)));
+
+        JsonNode *node_ptr;
+        node_ptr = new JsonObjectNode(std::move(temp));
+        std::cout << node_ptr->getType() << "\n";
+        node_ptr->print();
+    }
+
     void TestJsonNode::test() {
         std::cout << "----------------------------------[ test JsonNode ]----------------------------------" << std::endl;
-//        //test_JsonNode();
-//        test_JsonNullNode();
-//        test_JsonTrueNode();
-//        test_JsonFalseNode();
-//        test_JsonNumberNode();
-//        test_JsonStringNode();
-//
-//        test_JsonArrayNode();
+        //        //test_JsonNode();
+        //        test_JsonNullNode();
+        //        test_JsonTrueNode();
+        //        test_JsonFalseNode();
+        //        test_JsonNumberNode();
+        //        test_JsonStringNode();
+        //
+        //        test_JsonArrayNode();
 
-        test_Dict();
+        //        test_Dict();
+
+        test_JsonObjectNode();
     }
 }// namespace yzn

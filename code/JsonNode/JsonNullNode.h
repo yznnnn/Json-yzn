@@ -12,7 +12,7 @@ namespace yzn {
 
     class JsonNullNode : public JsonNode {
     public:
-        JsonNodeType getType() override { return JsonNodeType::TYPE_NULL; }
+        JsonNodeType getType() const override { return JsonNodeType::TYPE_NULL; }
 
         void print() const override { std::cout << "null"; }
     };

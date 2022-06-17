@@ -22,7 +22,7 @@ namespace yzn {
         explicit JsonStringNode(std::string &&input_string_ob) : value(std::move(input_string_ob)) {}
 
 
-        JsonNodeType getType() override { return JsonNodeType::TYPE_STRING; }
+        JsonNodeType getType() const override { return JsonNodeType::TYPE_STRING; }
         const void *getValue() const override { return &this->value; }
         void print() const override { std::cout << std::quoted(this->value); }
     };

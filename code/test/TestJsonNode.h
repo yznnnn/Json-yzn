@@ -10,6 +10,7 @@
 #include "../JsonNode/JsonNode.h"
 #include "../JsonNode/JsonNullNode.h"
 #include "../JsonNode/JsonNumberNode.h"
+#include "../JsonNode/JsonObjectNode.h"
 #include "../JsonNode/JsonStringNode.h"
 #include "../JsonNode/JsonTrueNode.h"
 #include <vector>

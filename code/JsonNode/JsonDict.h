@@ -39,6 +39,8 @@ namespace yzn {
             if (this->value_ptr != nullptr) { this->value_ptr->print(); }
         }
 
+        const std::string &getKey() const { return this->key; }
+        const JsonNode *getValuePtr() const { return this->value_ptr; }
 
         ~JsonDict() { this->free(); }
     };

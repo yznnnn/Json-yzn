@@ -9,7 +9,7 @@ namespace yzn {
 
     class JsonTrueNode : public JsonNode {
     public:
-        JsonNodeType getType() override { return JsonNodeType::TYPE_TRUE; }
+        JsonNodeType getType() const override { return JsonNodeType::TYPE_TRUE; }
 
         void print() const override { std::cout << "true"; }
     };
