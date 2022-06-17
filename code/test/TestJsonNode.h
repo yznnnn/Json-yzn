@@ -4,13 +4,14 @@
 
 #ifndef JSON_DEMO_TESTJSONNODE_H
 #define JSON_DEMO_TESTJSONNODE_H
+#include "../JsonNode/JsonArrayNode.h"
+#include "../JsonNode/JsonDict.h"
 #include "../JsonNode/JsonFalseNode.h"
 #include "../JsonNode/JsonNode.h"
 #include "../JsonNode/JsonNullNode.h"
 #include "../JsonNode/JsonNumberNode.h"
 #include "../JsonNode/JsonStringNode.h"
 #include "../JsonNode/JsonTrueNode.h"
-#include "../JsonNode/JsonArrayNode.h"
 #include <vector>
 namespace yzn {
 

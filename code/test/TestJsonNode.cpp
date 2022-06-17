@@ -176,15 +176,60 @@ namespace yzn {
         std::cout << std::endl;
     }
 
+
+    static void test_Dict() {
+        std::cout << std::endl;
+
+        JsonDict dict_0;
+        dict_0.print();
+        std::cout << std::endl;
+
+        JsonDict dict_1("name",new JsonStringNode("Bob"));
+        dict_1.print();
+        std::cout << std::endl;
+
+        JsonDict dict_2("age",new JsonNumberNode(12));
+        dict_2.print();
+        std::cout << std::endl;
+
+        std::vector<JsonNode *> temp;
+        JsonNode *node_ptr;
+
+        node_ptr = new JsonNumberNode(1.2);
+        temp.push_back(node_ptr);
+
+        node_ptr = new JsonStringNode("道可道");
+        temp.push_back(node_ptr);
+
+        node_ptr = new JsonStringNode("apple");
+        temp.push_back(node_ptr);
+
+        node_ptr = new JsonNullNode();
+        temp.push_back(node_ptr);
+
+        node_ptr = new JsonFalseNode();
+        temp.push_back(node_ptr);
+
+        node_ptr = new JsonTrueNode();
+        temp.push_back(node_ptr);
+
+        JsonDict dict_3("array",new JsonArrayNode(std::move(temp)));
+        dict_3.print();
+        std::cout << std::endl;
+    }
+
+
     void TestJsonNode::test() {
         std::cout << "----------------------------------[ test JsonNode ]----------------------------------" << std::endl;
-        //test_JsonNode();
-        test_JsonNullNode();
-        test_JsonTrueNode();
-        test_JsonFalseNode();
-        test_JsonNumberNode();
-        test_JsonStringNode();
+//        //test_JsonNode();
+//        test_JsonNullNode();
+//        test_JsonTrueNode();
+//        test_JsonFalseNode();
+//        test_JsonNumberNode();
+//        test_JsonStringNode();
+//
+//        test_JsonArrayNode();
 
-        test_JsonArrayNode();
+        test_Dict();
     }
 }// namespace yzn

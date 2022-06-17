@@ -133,12 +133,12 @@ namespace yzn {
             EQUAL_NUMBER(123, *((double *) (*vec_ptr)[3]->getValue()));
             EQUAL_NUMBER(JsonNodeType::TYPE_STRING, (*vec_ptr)[4]->getType());
             EQUAL_NUMBER("abc", *((std::string *) (*vec_ptr)[4]->getValue()));
-
         } else {
             EQUAL_NUMBER(JsonNodeType::TYPE_ARRAY, JsonNodeType::TYPE_UNKNOWN);
         }
         delete node_ptr;
         node_ptr = nullptr;
+
 
         /* 测试样例： [ [ ] , [ 0 ] , [ 0 , 1 ] , [ 0 , 1 , 2 ] ] */
         json_text = "[ [ ] , [ 0 ] , [ 0 , 1 ] , [ 0 , 1 , 2 ] ]";

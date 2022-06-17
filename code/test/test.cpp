@@ -7,7 +7,7 @@
 
 namespace yzn {
     void test() {
-        //TestJsonNode::test();
-        TestJsonParser::test();
+        TestJsonNode::test();
+        //TestJsonParser::test();
     }
 }// namespace yzn

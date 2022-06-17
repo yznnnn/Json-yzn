@@ -192,6 +192,13 @@ build JsonNode/CMakeFiles/lib_JsonNode.dir/JsonArrayNode.cpp.obj: CXX_COMPILER__
   OBJECT_DIR = JsonNode\CMakeFiles\lib_JsonNode.dir
   OBJECT_FILE_DIR = JsonNode\CMakeFiles\lib_JsonNode.dir
 
+build JsonNode/CMakeFiles/lib_JsonNode.dir/JsonDict.cpp.obj: CXX_COMPILER__lib_JsonNode_Debug C$:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonDict.cpp || cmake_object_order_depends_target_lib_JsonNode
+  DEP_FILE = JsonNode\CMakeFiles\lib_JsonNode.dir\JsonDict.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -IC:/Users/yzn/Documents/GitHub/Json-yzn/code/./test -IC:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonNode
+  OBJECT_DIR = JsonNode\CMakeFiles\lib_JsonNode.dir
+  OBJECT_FILE_DIR = JsonNode\CMakeFiles\lib_JsonNode.dir
+
 build JsonNode/CMakeFiles/lib_JsonNode.dir/JsonFalseNode.cpp.obj: CXX_COMPILER__lib_JsonNode_Debug C$:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonFalseNode.cpp || cmake_object_order_depends_target_lib_JsonNode
   DEP_FILE = JsonNode\CMakeFiles\lib_JsonNode.dir\JsonFalseNode.cpp.obj.d
   FLAGS = -g -std=gnu++14
@@ -242,7 +249,7 @@ build JsonNode/CMakeFiles/lib_JsonNode.dir/JsonTrueNode.cpp.obj: CXX_COMPILER__l
 #############################################
 # Link the static library JsonNode\liblib_JsonNode.a
 
-build JsonNode/liblib_JsonNode.a: CXX_STATIC_LIBRARY_LINKER__lib_JsonNode_Debug JsonNode/CMakeFiles/lib_JsonNode.dir/JsonArrayNode.cpp.obj JsonNode/CMakeFiles/lib_JsonNode.dir/JsonFalseNode.cpp.obj JsonNode/CMakeFiles/lib_JsonNode.dir/JsonNode.cpp.obj JsonNode/CMakeFiles/lib_JsonNode.dir/JsonNullNode.cpp.obj JsonNode/CMakeFiles/lib_JsonNode.dir/JsonNumberNode.cpp.obj JsonNode/CMakeFiles/lib_JsonNode.dir/JsonStringNode.cpp.obj JsonNode/CMakeFiles/lib_JsonNode.dir/JsonTrueNode.cpp.obj
+build JsonNode/liblib_JsonNode.a: CXX_STATIC_LIBRARY_LINKER__lib_JsonNode_Debug JsonNode/CMakeFiles/lib_JsonNode.dir/JsonArrayNode.cpp.obj JsonNode/CMakeFiles/lib_JsonNode.dir/JsonDict.cpp.obj JsonNode/CMakeFiles/lib_JsonNode.dir/JsonFalseNode.cpp.obj JsonNode/CMakeFiles/lib_JsonNode.dir/JsonNode.cpp.obj JsonNode/CMakeFiles/lib_JsonNode.dir/JsonNullNode.cpp.obj JsonNode/CMakeFiles/lib_JsonNode.dir/JsonNumberNode.cpp.obj JsonNode/CMakeFiles/lib_JsonNode.dir/JsonStringNode.cpp.obj JsonNode/CMakeFiles/lib_JsonNode.dir/JsonTrueNode.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = JsonNode\CMakeFiles\lib_JsonNode.dir
   POST_BUILD = cd .

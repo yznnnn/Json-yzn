@@ -87,7 +87,8 @@
 				3,
 				4,
 				5,
-				6
+				6,
+				7
 			]
 		}
 	],
@@ -111,7 +112,8 @@
 				3,
 				4,
 				5,
-				6
+				6,
+				7
 			]
 		}
 	],
@@ -121,6 +123,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "JsonNode/JsonArrayNode.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "JsonNode/JsonDict.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

@@ -57,6 +57,7 @@ namespace yzn {
                                           const char *expect_literals,
                                           JsonNodeType expect_type);
         JsonParserStateCode parseNumber(JsonNode **node_pp);
+        JsonParserStateCode parseString_raw(std::string &temp_string);
         JsonParserStateCode parseString(JsonNode **node_pp);
         JsonParserStateCode parseArray(JsonNode **node_pp);
 
