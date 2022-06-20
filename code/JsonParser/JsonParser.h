@@ -33,7 +33,7 @@ namespace yzn {
         MISS_COMMA_OR_SQUARE_BRACKET,// json-text 中，array 含有非法字符
         MISS_KEY,                    // json-text 中，object 找不到 key
         MISS_COLON,                  // json-text 中，object 找不到 :
-        MISS_COMMA_OR_CURLY_BRACKET  // json-text 中，object 元素的后续字符非法
+        MISS_COMMA_OR_CURLY_BRACKET
     };
     std::ostream &operator<<(std::ostream &os, const yzn::JsonParserStateCode &state_code);
 

@@ -204,6 +204,8 @@ namespace yzn {
         expect_element_size = 7;
         state_code = parser.parse(&node_ptr, json_text);
 
+        node_ptr->print();
+
         EQUAL_NUMBER(JsonParserStateCode::OK, state_code);
         if (node_ptr != nullptr) {
             EQUAL_NUMBER(JsonNodeType::TYPE_OBJECT, node_ptr->getType());
@@ -247,9 +249,7 @@ namespace yzn {
             EQUAL_NUMBER(3, real_size);
             const auto temp_vec_ptr_0 = (std::vector<JsonDict *> *) node_cptr_0->getValue();
             for (size_t i = 0; i < 3; i++) {
-                std::string temp_str;
-                temp_str += (char) ('1' + i);
-                EQUAL_STRING(temp_str, (*temp_vec_ptr_0)[i]->getKey());
+                EQUAL_STRING((const char *) ('1' + i), (*temp_vec_ptr_0)[i]->getKey());
                 EQUAL_NUMBER(JsonNodeType::TYPE_NUMBER, (*temp_vec_ptr_0)[i]->getValuePtr()->getType());
                 EQUAL_NUMBER(i + 1, *((double *) (*temp_vec_ptr_0)[i]->getValuePtr()->getValue()));
             }
@@ -353,55 +353,29 @@ namespace yzn {
         TEST_ERROR(JsonParserStateCode::MISS_COMMA_OR_SQUARE_BRACKET, "[[]");
     }
 
-    static void Test_Parse_Error_MISS_KEY() {
-        TEST_ERROR(JsonParserStateCode::MISS_KEY, "{:1,");
-        TEST_ERROR(JsonParserStateCode::MISS_KEY, "{1:1,");
-        TEST_ERROR(JsonParserStateCode::MISS_KEY, "{true:1,");
-        TEST_ERROR(JsonParserStateCode::MISS_KEY, "{false:1,");
-        TEST_ERROR(JsonParserStateCode::MISS_KEY, "{null:1,");
-        TEST_ERROR(JsonParserStateCode::MISS_KEY, "{[]:1,");
-        TEST_ERROR(JsonParserStateCode::MISS_KEY, "{{}:1,");
-        TEST_ERROR(JsonParserStateCode::MISS_KEY, "{\"a\":1,");
-    }
-
-    static void Test_Parse_Error_MISS_COLON() {
-        TEST_ERROR(JsonParserStateCode::MISS_COLON, "{\"a\"}");
-        TEST_ERROR(JsonParserStateCode::MISS_COLON, "{\"a\",\"b\"}");
-    }
-
-    static void Test_Parse_Error_MISS_COMMA_OR_CURLY_BRACKET() {
-        TEST_ERROR(JsonParserStateCode::MISS_COMMA_OR_CURLY_BRACKET, "{\"a\":1");
-        TEST_ERROR(JsonParserStateCode::MISS_COMMA_OR_CURLY_BRACKET, "{\"a\":1]");
-        TEST_ERROR(JsonParserStateCode::MISS_COMMA_OR_CURLY_BRACKET, "{\"a\":1 \"b\"");
-        TEST_ERROR(JsonParserStateCode::MISS_COMMA_OR_CURLY_BRACKET, "{\"a\":{}");
-    }
-
 
     void TestJsonParser::test() {
-        std::cout << "----------------------------------[ test JsonParser ]----------------------------------" << std::endl;
+        std::cout << "----------------------------------[ test JsonNode ]----------------------------------" << std::endl;
 
-        Test_Parse_NULL();
-        Test_Parse_TRUE();
-        Test_Parse_FALSE();
-        Test_Parse_NUMBER();
-        Test_Parse_STRING();
-        Test_Parse_ARRAY();
+        //        Test_Parse_NULL();
+        //        Test_Parse_TRUE();
+        //        Test_Parse_FALSE();
+        //        Test_Parse_NUMBER();
+        //        Test_Parse_STRING();
+        //        Test_Parse_ARRAY();
         Test_Parse_Object();
 
 
-        Test_Parse_Error_ONLY_WS();
-        Test_Parse_Error_INVALID_VALUE();
-        Test_Parse_Error_SURPLUS();
-        Test_Parse_Error_OUT_OF_RANGE();
-        Test_Parse_Error_MISS_QUOTATION_MARK();
-        Test_Parse_Error_INVALID_STRING_ESCAPE();
-        Test_Parse_Error_INVALID_STRING_CHAR();
-        Test_Parse_Error_INVALID_UNICODE_HEX();
-        Test_Parse_Error_INVALID_UNICODE_SURROGATE();
-        Test_Parse_Error_MISS_COMMA_OR_SQUARE_BRACKET();
-        Test_Parse_Error_MISS_KEY();
-        Test_Parse_Error_MISS_COLON();
-        Test_Parse_Error_MISS_COMMA_OR_CURLY_BRACKET();
+        //        Test_Parse_Error_ONLY_WS();
+        //        Test_Parse_Error_INVALID_VALUE();
+        //        Test_Parse_Error_SURPLUS();
+        //        Test_Parse_Error_OUT_OF_RANGE();
+        //        Test_Parse_Error_MISS_QUOTATION_MARK();
+        //        Test_Parse_Error_INVALID_STRING_ESCAPE();
+        //        Test_Parse_Error_INVALID_STRING_CHAR();
+        //        Test_Parse_Error_INVALID_UNICODE_HEX();
+        //        Test_Parse_Error_INVALID_UNICODE_SURROGATE();
+        //        Test_Parse_Error_MISS_COMMA_OR_SQUARE_BRACKET();
 
         std::cout << std::endl
                   << "-------------------------------------------------------------------------------------" << std::endl
