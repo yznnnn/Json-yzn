@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="json-demo"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\test\;CMake Files\JsonNode\;CMake Files\JsonParser\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="json-demo">
+				<Option output="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/json-demo.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./test"/>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonNode"/>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonParser"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 json-demo"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="json-demo/fast">
+				<Option output="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/json-demo.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./test"/>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonNode"/>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonParser"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 json-demo/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lib_test">
+				<Option output="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/test/liblib_test.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./test"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 lib_test"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lib_test/fast">
+				<Option output="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/test/liblib_test.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./test"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 lib_test/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lib_JsonNode">
+				<Option output="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonNode/liblib_JsonNode.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonNode"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./test"/>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonNode"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonNode/Makefile&quot;  VERBOSE=1 lib_JsonNode"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonNode/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonNode/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonNode/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lib_JsonNode/fast">
+				<Option output="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonNode/liblib_JsonNode.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonNode"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./test"/>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonNode"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonNode/Makefile&quot;  VERBOSE=1 lib_JsonNode/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonNode/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonNode/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonNode/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lib_JsonParser">
+				<Option output="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonParser/liblib_JsonParser.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonParser"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./test"/>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonNode"/>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonParser"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonParser/Makefile&quot;  VERBOSE=1 lib_JsonParser"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonParser/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonParser/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonParser/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lib_JsonParser/fast">
+				<Option output="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonParser/liblib_JsonParser.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonParser"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./test"/>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonNode"/>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonParser"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonParser/Makefile&quot;  VERBOSE=1 lib_JsonParser/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonParser/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonParser/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonParser/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonArrayNode.cpp">
+			<Option target="lib_JsonNode"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonArrayNode.h">
+			<Option target="lib_JsonNode"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonDict.cpp">
+			<Option target="lib_JsonNode"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonDict.h">
+			<Option target="lib_JsonNode"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonFalseNode.cpp">
+			<Option target="lib_JsonNode"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonFalseNode.h">
+			<Option target="lib_JsonNode"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonNode.cpp">
+			<Option target="lib_JsonNode"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonNode.h">
+			<Option target="lib_JsonNode"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonNullNode.cpp">
+			<Option target="lib_JsonNode"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonNullNode.h">
+			<Option target="lib_JsonNode"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonNumberNode.cpp">
+			<Option target="lib_JsonNode"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonNumberNode.h">
+			<Option target="lib_JsonNode"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonObjectNode.cpp">
+			<Option target="lib_JsonNode"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonObjectNode.h">
+			<Option target="lib_JsonNode"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonStringNode.cpp">
+			<Option target="lib_JsonNode"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonStringNode.h">
+			<Option target="lib_JsonNode"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonTrueNode.cpp">
+			<Option target="lib_JsonNode"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonTrueNode.h">
+			<Option target="lib_JsonNode"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonParser/JsonParser.cpp">
+			<Option target="lib_JsonParser"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonParser/JsonParser.h">
+			<Option target="lib_JsonParser"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/main.cpp">
+			<Option target="json-demo"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/test/TestJsonNode.cpp">
+			<Option target="lib_test"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/test/TestJsonNode.h">
+			<Option target="lib_test"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/test/TestJsonParser.cpp">
+			<Option target="lib_test"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/test/TestJsonParser.h">
+			<Option target="lib_test"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/test/test.cpp">
+			<Option target="lib_test"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/test/test.h">
+			<Option target="lib_test"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\JsonNode\"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonParser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\JsonParser\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

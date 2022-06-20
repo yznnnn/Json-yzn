@@ -104,15 +104,15 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "lib_test::@36f028580bb02cc8272a"
-		},
-		{
-			"backtrace" : 2,
 			"id" : "lib_JsonNode::@7c530decee1889ecd2e7"
 		},
 		{
 			"backtrace" : 2,
 			"id" : "lib_JsonParser::@3252e5e7c2fd5cc67d4b"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "lib_test::@36f028580bb02cc8272a"
 		}
 	],
 	"id" : "json-demo::@6890427a1f51a3e7e1df",
