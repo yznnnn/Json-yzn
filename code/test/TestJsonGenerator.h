@@ -46,22 +46,24 @@ namespace yzn {
                      (expect_string) == (actual_string))
 
 
-
 /**
  * 比较生成器生成的结果
  */
-#define TEST_GENERATOR_BY_STRING(json_text)                                   \
-    do {                                                                      \
-        JsonNode *node_ptr = nullptr;                                         \
-        JsonParser parser{};                                                  \
-        JsonGenerator generator{};                                            \
-        JsonParserStateCode state_code = parser.parse(&node_ptr, json_text);  \
-        EQUAL_NUMBER(JsonParserStateCode::OK, state_code);                    \
-        if (node_ptr != nullptr) {                                            \
-            generator.stringify(node_ptr);                                    \
-            const std::string &generator_json_text = generator.getJsonText(); \
-            EQUAL_STRING(json_text, generator_json_text);                     \
-        }                                                                     \
+#define TEST_GENERATOR_BY_STRING(json_text)                                              \
+    do {                                                                                 \
+        JsonNode *node_ptr = nullptr;                                                    \
+        JsonParser parser{};                                                             \
+        JsonGenerator generator{};                                                       \
+        JsonParserStateCode parser_state_code = parser.parse(&node_ptr, json_text);      \
+        EQUAL_NUMBER(JsonParserStateCode::OK, parser_state_code);                        \
+        if (node_ptr != nullptr) {                                                       \
+            JsonGeneratorStateCode generator_state_code = generator.stringify(node_ptr); \
+            const std::string &generator_json_text = generator.getJsonText();            \
+            EQUAL_NUMBER(JsonGeneratorStateCode::OK, generator_state_code);              \
+            EQUAL_STRING(json_text, generator_json_text);                                \
+        }                                                                                \
+        delete node_ptr;                                                                 \
+        node_ptr = nullptr;                                                              \
     } while (0)
 
 

@@ -7,6 +7,8 @@
 namespace yzn {
 
     std::ostream &operator<<(std::ostream &os, const yzn::JsonParserStateCode &state_code) {
+        os << "Parser ";
+
         switch (state_code) {
             case JsonParserStateCode::OK:
                 return os << "State Code: OK";
@@ -37,6 +39,7 @@ namespace yzn {
             case JsonParserStateCode::MISS_COMMA_OR_CURLY_BRACKET:
                 return os << "State Code: MISS_COMMA_OR_CURLY_BRACKET";
         }
+        return os;
     }
 
 

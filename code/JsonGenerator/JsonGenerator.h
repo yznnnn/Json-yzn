@@ -5,23 +5,27 @@
 #ifndef JSON_DEMO_JSONGENERATOR_H
 #define JSON_DEMO_JSONGENERATOR_H
 #include "../JsonNode/JsonNode.h"
+#include <cassert>
 #include <string>
-
 namespace yzn {
     enum class JsonGeneratorStateCode {
-        OK = 0// 生成成功
+        OK = 0,// 生成成功
+        FAILED // 生成失败
     };
-
+    std::ostream &operator<<(std::ostream &os, const yzn::JsonGeneratorStateCode &state_code);
 
     class JsonGenerator {
     private:
         std::string json_text;
+
         void clean() { this->json_text = ""; }
+        JsonGeneratorStateCode stringifyValue(const JsonNode *cur_node_ptr);
+        JsonGeneratorStateCode stringifyLiterals(const JsonNode *cur_node_ptr);
 
     public:
-        JsonGeneratorStateCode stringify(JsonNode *node_ptr);
+        JsonGeneratorStateCode stringify(const JsonNode *cur_node_ptr);
 
-        const std::string &getJsonText() const { return this->json_text; }
+        const std::string &getJsonText() { return this->json_text; }
     };
 
 }// namespace yzn
