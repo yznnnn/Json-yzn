@@ -12,11 +12,9 @@ namespace yzn {
                 return os << "State Code: OK";
             case JsonGeneratorStateCode::FAILED:
                 return os << "State Code: FAILED";
-                ;
         }
         return os;
     }
-
 
     JsonGeneratorStateCode JsonGenerator::stringify(const JsonNode *cur_node_ptr) {
         assert(cur_node_ptr != nullptr);
@@ -33,7 +31,7 @@ namespace yzn {
             case JsonNodeType::TYPE_FALSE:
                 return this->stringifyLiterals(cur_node_ptr);
             case JsonNodeType::TYPE_NUMBER:
-                break;
+                return this->stringifyNumber(cur_node_ptr);
             case JsonNodeType::TYPE_STRING:
                 break;
             case JsonNodeType::TYPE_ARRAY:
@@ -45,6 +43,7 @@ namespace yzn {
         }
         return JsonGeneratorStateCode::FAILED;
     }
+
     JsonGeneratorStateCode JsonGenerator::stringifyLiterals(const JsonNode *cur_node_ptr) {
         switch (cur_node_ptr->getType()) {
             case JsonNodeType::TYPE_NULL:
@@ -59,6 +58,16 @@ namespace yzn {
             default:
                 break;
         }
+        return JsonGeneratorStateCode::OK;
+    }
+
+    JsonGeneratorStateCode JsonGenerator::stringifyNumber(const JsonNode *cur_node_ptr) {
+        assert(cur_node_ptr->getType() == JsonNodeType::TYPE_NUMBER);
+        double temp_double = *((double *) cur_node_ptr->getValue());
+        char buffer[32];
+        sprintf(buffer, "%.17g", temp_double);
+        this->json_text += buffer;
+
         return JsonGeneratorStateCode::OK;
     }
 
