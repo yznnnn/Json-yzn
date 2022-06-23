@@ -68,11 +68,26 @@ include test/CMakeFiles/lib_test.dir/progress.make
 # Include the compile flags for this target's objects.
 include test/CMakeFiles/lib_test.dir/flags.make
 
+test/CMakeFiles/lib_test.dir/TestJsonGenerator.cpp.obj: test/CMakeFiles/lib_test.dir/flags.make
+test/CMakeFiles/lib_test.dir/TestJsonGenerator.cpp.obj: test/CMakeFiles/lib_test.dir/includes_CXX.rsp
+test/CMakeFiles/lib_test.dir/TestJsonGenerator.cpp.obj: ../test/TestJsonGenerator.cpp
+test/CMakeFiles/lib_test.dir/TestJsonGenerator.cpp.obj: test/CMakeFiles/lib_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/lib_test.dir/TestJsonGenerator.cpp.obj"
+	cd /d C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug\test && C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/lib_test.dir/TestJsonGenerator.cpp.obj -MF CMakeFiles\lib_test.dir\TestJsonGenerator.cpp.obj.d -o CMakeFiles\lib_test.dir\TestJsonGenerator.cpp.obj -c C:\Users\yzn\Documents\GitHub\Json-yzn\code\test\TestJsonGenerator.cpp
+
+test/CMakeFiles/lib_test.dir/TestJsonGenerator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lib_test.dir/TestJsonGenerator.cpp.i"
+	cd /d C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug\test && C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\yzn\Documents\GitHub\Json-yzn\code\test\TestJsonGenerator.cpp > CMakeFiles\lib_test.dir\TestJsonGenerator.cpp.i
+
+test/CMakeFiles/lib_test.dir/TestJsonGenerator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lib_test.dir/TestJsonGenerator.cpp.s"
+	cd /d C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug\test && C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\yzn\Documents\GitHub\Json-yzn\code\test\TestJsonGenerator.cpp -o CMakeFiles\lib_test.dir\TestJsonGenerator.cpp.s
+
 test/CMakeFiles/lib_test.dir/TestJsonNode.cpp.obj: test/CMakeFiles/lib_test.dir/flags.make
 test/CMakeFiles/lib_test.dir/TestJsonNode.cpp.obj: test/CMakeFiles/lib_test.dir/includes_CXX.rsp
 test/CMakeFiles/lib_test.dir/TestJsonNode.cpp.obj: ../test/TestJsonNode.cpp
 test/CMakeFiles/lib_test.dir/TestJsonNode.cpp.obj: test/CMakeFiles/lib_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/lib_test.dir/TestJsonNode.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/lib_test.dir/TestJsonNode.cpp.obj"
 	cd /d C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug\test && C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/lib_test.dir/TestJsonNode.cpp.obj -MF CMakeFiles\lib_test.dir\TestJsonNode.cpp.obj.d -o CMakeFiles\lib_test.dir\TestJsonNode.cpp.obj -c C:\Users\yzn\Documents\GitHub\Json-yzn\code\test\TestJsonNode.cpp
 
 test/CMakeFiles/lib_test.dir/TestJsonNode.cpp.i: cmake_force
@@ -87,7 +102,7 @@ test/CMakeFiles/lib_test.dir/TestJsonParser.cpp.obj: test/CMakeFiles/lib_test.di
 test/CMakeFiles/lib_test.dir/TestJsonParser.cpp.obj: test/CMakeFiles/lib_test.dir/includes_CXX.rsp
 test/CMakeFiles/lib_test.dir/TestJsonParser.cpp.obj: ../test/TestJsonParser.cpp
 test/CMakeFiles/lib_test.dir/TestJsonParser.cpp.obj: test/CMakeFiles/lib_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/lib_test.dir/TestJsonParser.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/CMakeFiles/lib_test.dir/TestJsonParser.cpp.obj"
 	cd /d C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug\test && C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/lib_test.dir/TestJsonParser.cpp.obj -MF CMakeFiles\lib_test.dir\TestJsonParser.cpp.obj.d -o CMakeFiles\lib_test.dir\TestJsonParser.cpp.obj -c C:\Users\yzn\Documents\GitHub\Json-yzn\code\test\TestJsonParser.cpp
 
 test/CMakeFiles/lib_test.dir/TestJsonParser.cpp.i: cmake_force
@@ -102,7 +117,7 @@ test/CMakeFiles/lib_test.dir/test.cpp.obj: test/CMakeFiles/lib_test.dir/flags.ma
 test/CMakeFiles/lib_test.dir/test.cpp.obj: test/CMakeFiles/lib_test.dir/includes_CXX.rsp
 test/CMakeFiles/lib_test.dir/test.cpp.obj: ../test/test.cpp
 test/CMakeFiles/lib_test.dir/test.cpp.obj: test/CMakeFiles/lib_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/CMakeFiles/lib_test.dir/test.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/CMakeFiles/lib_test.dir/test.cpp.obj"
 	cd /d C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug\test && C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/lib_test.dir/test.cpp.obj -MF CMakeFiles\lib_test.dir\test.cpp.obj.d -o CMakeFiles\lib_test.dir\test.cpp.obj -c C:\Users\yzn\Documents\GitHub\Json-yzn\code\test\test.cpp
 
 test/CMakeFiles/lib_test.dir/test.cpp.i: cmake_force
@@ -115,6 +130,7 @@ test/CMakeFiles/lib_test.dir/test.cpp.s: cmake_force
 
 # Object files for target lib_test
 lib_test_OBJECTS = \
+"CMakeFiles/lib_test.dir/TestJsonGenerator.cpp.obj" \
 "CMakeFiles/lib_test.dir/TestJsonNode.cpp.obj" \
 "CMakeFiles/lib_test.dir/TestJsonParser.cpp.obj" \
 "CMakeFiles/lib_test.dir/test.cpp.obj"
@@ -122,12 +138,13 @@ lib_test_OBJECTS = \
 # External object files for target lib_test
 lib_test_EXTERNAL_OBJECTS =
 
+test/liblib_test.a: test/CMakeFiles/lib_test.dir/TestJsonGenerator.cpp.obj
 test/liblib_test.a: test/CMakeFiles/lib_test.dir/TestJsonNode.cpp.obj
 test/liblib_test.a: test/CMakeFiles/lib_test.dir/TestJsonParser.cpp.obj
 test/liblib_test.a: test/CMakeFiles/lib_test.dir/test.cpp.obj
 test/liblib_test.a: test/CMakeFiles/lib_test.dir/build.make
 test/liblib_test.a: test/CMakeFiles/lib_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library liblib_test.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library liblib_test.a"
 	cd /d C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug\test && $(CMAKE_COMMAND) -P CMakeFiles\lib_test.dir\cmake_clean_target.cmake
 	cd /d C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug\test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\lib_test.dir\link.txt --verbose=$(VERBOSE)
 

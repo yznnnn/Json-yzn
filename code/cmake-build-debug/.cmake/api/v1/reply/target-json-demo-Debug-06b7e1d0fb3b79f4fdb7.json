@@ -29,13 +29,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 24,
+				"line" : 28,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 25,
+				"line" : 29,
 				"parent" : 0
 			},
 			{
@@ -54,6 +54,12 @@
 				"command" : 2,
 				"file" : 0,
 				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 24,
 				"parent" : 0
 			}
 		]
@@ -83,6 +89,10 @@
 				{
 					"backtrace" : 5,
 					"path" : "C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonParser"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonGenerator"
 				}
 			],
 			"language" : "CXX",
@@ -104,6 +114,10 @@
 	[
 		{
 			"backtrace" : 2,
+			"id" : "lib_test::@36f028580bb02cc8272a"
+		},
+		{
+			"backtrace" : 2,
 			"id" : "lib_JsonNode::@7c530decee1889ecd2e7"
 		},
 		{
@@ -112,7 +126,7 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "lib_test::@36f028580bb02cc8272a"
+			"id" : "lib_JsonGenerator::@8b5d9a6dbe80d2d0488d"
 		}
 	],
 	"id" : "json-demo::@6890427a1f51a3e7e1df",
@@ -141,6 +155,11 @@
 			{
 				"backtrace" : 2,
 				"fragment" : "JsonParser\\liblib_JsonParser.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "JsonGenerator\\liblib_JsonGenerator.a",
 				"role" : "libraries"
 			},
 			{

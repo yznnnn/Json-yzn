@@ -16,6 +16,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/test/CMakeFiles/lib_test.dir/DependInfo.cmake"
   "C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonNode/CMakeFiles/lib_JsonNode.dir/DependInfo.cmake"
   "C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonParser/CMakeFiles/lib_JsonParser.dir/DependInfo.cmake"
+  "C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonGenerator/CMakeFiles/lib_JsonGenerator.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

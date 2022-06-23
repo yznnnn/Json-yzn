@@ -5,7 +5,7 @@
 		<Option title="json-demo"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\test\;CMake Files\JsonNode\;CMake Files\JsonParser\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\test\;CMake Files\JsonNode\;CMake Files\JsonParser\;CMake Files\JsonGenerator\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug"/>
@@ -27,6 +27,7 @@
 					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./test"/>
 					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonNode"/>
 					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonParser"/>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonGenerator"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
@@ -52,6 +53,7 @@
 					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./test"/>
 					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonNode"/>
 					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonParser"/>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonGenerator"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
@@ -231,7 +233,65 @@
 					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonParser/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="lib_JsonGenerator">
+				<Option output="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonGenerator/liblib_JsonGenerator.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonGenerator"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./test"/>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonNode"/>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonParser"/>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonGenerator"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonGenerator/Makefile&quot;  VERBOSE=1 lib_JsonGenerator"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonGenerator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonGenerator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonGenerator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lib_JsonGenerator/fast">
+				<Option output="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonGenerator/liblib_JsonGenerator.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonGenerator"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./test"/>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonNode"/>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonParser"/>
+					<Add directory="C:/Users/yzn/Documents/GitHub/Json-yzn/code/./JsonGenerator"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonGenerator/Makefile&quot;  VERBOSE=1 lib_JsonGenerator/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonGenerator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonGenerator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/yzn/Documents/GitHub/Json-yzn/code/cmake-build-debug/JsonGenerator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonGenerator/JsonGenerator.cpp">
+			<Option target="lib_JsonGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonGenerator/JsonGenerator.h">
+			<Option target="lib_JsonGenerator"/>
+		</Unit>
 		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonArrayNode.cpp">
 			<Option target="lib_JsonNode"/>
 		</Unit>
@@ -295,6 +355,12 @@
 		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/main.cpp">
 			<Option target="json-demo"/>
 		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/test/TestJsonGenerator.cpp">
+			<Option target="lib_test"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/test/TestJsonGenerator.h">
+			<Option target="lib_test"/>
+		</Unit>
 		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/test/TestJsonNode.cpp">
 			<Option target="lib_test"/>
 		</Unit>
@@ -324,6 +390,9 @@
 		</Unit>
 		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonParser/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\JsonParser\"/>
+		</Unit>
+		<Unit filename="C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonGenerator/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\JsonGenerator\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

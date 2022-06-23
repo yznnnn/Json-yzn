@@ -129,6 +129,30 @@ lib_test/fast:
 	cd /d C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\lib_test.dir\build.make test/CMakeFiles/lib_test.dir/build
 .PHONY : lib_test/fast
 
+TestJsonGenerator.obj: TestJsonGenerator.cpp.obj
+.PHONY : TestJsonGenerator.obj
+
+# target to build an object file
+TestJsonGenerator.cpp.obj:
+	cd /d C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\lib_test.dir\build.make test/CMakeFiles/lib_test.dir/TestJsonGenerator.cpp.obj
+.PHONY : TestJsonGenerator.cpp.obj
+
+TestJsonGenerator.i: TestJsonGenerator.cpp.i
+.PHONY : TestJsonGenerator.i
+
+# target to preprocess a source file
+TestJsonGenerator.cpp.i:
+	cd /d C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\lib_test.dir\build.make test/CMakeFiles/lib_test.dir/TestJsonGenerator.cpp.i
+.PHONY : TestJsonGenerator.cpp.i
+
+TestJsonGenerator.s: TestJsonGenerator.cpp.s
+.PHONY : TestJsonGenerator.s
+
+# target to generate assembly for a file
+TestJsonGenerator.cpp.s:
+	cd /d C:\Users\yzn\Documents\GitHub\Json-yzn\code\cmake-build-debug && $(MAKE) $(MAKESILENT) -f test\CMakeFiles\lib_test.dir\build.make test/CMakeFiles/lib_test.dir/TestJsonGenerator.cpp.s
+.PHONY : TestJsonGenerator.cpp.s
+
 TestJsonNode.obj: TestJsonNode.cpp.obj
 .PHONY : TestJsonNode.obj
 
@@ -210,6 +234,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... lib_test
+	@echo ... TestJsonGenerator.obj
+	@echo ... TestJsonGenerator.i
+	@echo ... TestJsonGenerator.s
 	@echo ... TestJsonNode.obj
 	@echo ... TestJsonNode.i
 	@echo ... TestJsonNode.s

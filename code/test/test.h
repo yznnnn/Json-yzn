@@ -6,6 +6,7 @@
 #define JSON_DEMO_TEST_H
 #include "TestJsonNode.h"
 #include "TestJsonParser.h"
+#include "TestJsonGenerator.h"
 #include <iostream>
 namespace yzn {
     void test();

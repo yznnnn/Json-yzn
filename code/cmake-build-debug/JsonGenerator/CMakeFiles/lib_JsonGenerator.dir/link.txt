@@ -1,0 +1,2 @@
+C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\ar.exe qc liblib_JsonGenerator.a CMakeFiles/lib_JsonGenerator.dir/JsonGenerator.cpp.obj
+C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\ranlib.exe liblib_JsonGenerator.a

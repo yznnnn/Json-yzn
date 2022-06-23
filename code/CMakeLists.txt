@@ -20,7 +20,11 @@ add_subdirectory(./JsonNode)     # 添加 .cpp 文件目录
 include_directories(./JsonParser)  # 添加 .h   文件目录
 add_subdirectory(./JsonParser)     # 添加 .cpp 文件目录
 
+# 添加 JsonGenerator 目录
+include_directories(./JsonGenerator)  # 添加 .h   文件目录
+add_subdirectory(./JsonGenerator)     # 添加 .cpp 文件目录
+
 # 生成可执行文件
 add_executable(json-demo ${DIR_SRCS})
-target_link_libraries(json-demo lib_test lib_JsonNode lib_JsonParser)
+target_link_libraries(json-demo lib_test lib_JsonNode lib_JsonParser lib_JsonGenerator)
 

@@ -377,7 +377,7 @@ namespace yzn {
     }
 
     void TestJsonParser::test() {
-        std::cout << "----------------------------------[ test JsonNode ]----------------------------------" << std::endl;
+        std::cout << "----------------------------------[ test JsonParser ]----------------------------------" << std::endl;
 
         Test_Parse_NULL();
         Test_Parse_TRUE();

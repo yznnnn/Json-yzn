@@ -167,6 +167,19 @@ lib_JsonParser/fast:
 	$(MAKE) $(MAKESILENT) -f JsonParser\CMakeFiles\lib_JsonParser.dir\build.make JsonParser/CMakeFiles/lib_JsonParser.dir/build
 .PHONY : lib_JsonParser/fast
 
+#=============================================================================
+# Target rules for targets named lib_JsonGenerator
+
+# Build rule for target.
+lib_JsonGenerator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 lib_JsonGenerator
+.PHONY : lib_JsonGenerator
+
+# fast build rule for target.
+lib_JsonGenerator/fast:
+	$(MAKE) $(MAKESILENT) -f JsonGenerator\CMakeFiles\lib_JsonGenerator.dir\build.make JsonGenerator/CMakeFiles/lib_JsonGenerator.dir/build
+.PHONY : lib_JsonGenerator/fast
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -200,6 +213,7 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... json-demo
+	@echo ... lib_JsonGenerator
 	@echo ... lib_JsonNode
 	@echo ... lib_JsonParser
 	@echo ... lib_test

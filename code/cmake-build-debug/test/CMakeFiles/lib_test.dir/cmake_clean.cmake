@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/lib_test.dir/TestJsonGenerator.cpp.obj"
+  "CMakeFiles/lib_test.dir/TestJsonGenerator.cpp.obj.d"
   "CMakeFiles/lib_test.dir/TestJsonNode.cpp.obj"
   "CMakeFiles/lib_test.dir/TestJsonNode.cpp.obj.d"
   "CMakeFiles/lib_test.dir/TestJsonParser.cpp.obj"

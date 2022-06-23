@@ -10,7 +10,8 @@
 					[
 						1,
 						2,
-						3
+						3,
+						4
 					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
@@ -36,7 +37,7 @@
 					"source" : "test",
 					"targetIndexes" : 
 					[
-						3
+						4
 					]
 				},
 				{
@@ -51,7 +52,7 @@
 					"source" : "JsonNode",
 					"targetIndexes" : 
 					[
-						1
+						2
 					]
 				},
 				{
@@ -66,7 +67,22 @@
 					"source" : "JsonParser",
 					"targetIndexes" : 
 					[
-						2
+						3
+					]
+				},
+				{
+					"build" : "JsonGenerator",
+					"jsonFile" : "directory-JsonGenerator-Debug-ced4302b8596d0206a22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "JsonGenerator",
+					"targetIndexes" : 
+					[
+						1
 					]
 				}
 			],
@@ -79,7 +95,8 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4
 					],
 					"name" : "json-demo",
 					"targetIndexes" : 
@@ -87,7 +104,8 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4
 					]
 				}
 			],
@@ -96,8 +114,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "json-demo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-json-demo-Debug-ef4f9a888751eebea911.json",
+					"jsonFile" : "target-json-demo-Debug-06b7e1d0fb3b79f4fdb7.json",
 					"name" : "json-demo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "lib_JsonGenerator::@8b5d9a6dbe80d2d0488d",
+					"jsonFile" : "target-lib_JsonGenerator-Debug-cc81c0418b3aa2ec1309.json",
+					"name" : "lib_JsonGenerator",
 					"projectIndex" : 0
 				},
 				{
@@ -117,7 +142,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "lib_test::@36f028580bb02cc8272a",
-					"jsonFile" : "target-lib_test-Debug-1607d6633da1adb511dd.json",
+					"jsonFile" : "target-lib_test-Debug-b02b514dcc51883f8733.json",
 					"name" : "lib_test",
 					"projectIndex" : 0
 				}

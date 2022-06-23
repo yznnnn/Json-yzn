@@ -186,4 +186,7 @@ test/CMakeFiles/lib_test.dir/test.cpp.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/x86_64-w64-mingw32/include/math.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cstring \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/x86_64-w64-mingw32/include/string.h \
- C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h
+ C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ C:\Users\yzn\Documents\GitHub\Json-yzn\code\test\TestJsonGenerator.h \
+ C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonGenerator/JsonGenerator.h \
+ C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonNode.h

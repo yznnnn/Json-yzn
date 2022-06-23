@@ -95,6 +95,7 @@ json-demo.exe: CMakeFiles/json-demo.dir/build.make
 json-demo.exe: test/liblib_test.a
 json-demo.exe: JsonNode/liblib_JsonNode.a
 json-demo.exe: JsonParser/liblib_JsonParser.a
+json-demo.exe: JsonGenerator/liblib_JsonGenerator.a
 json-demo.exe: CMakeFiles/json-demo.dir/linklibs.rsp
 json-demo.exe: CMakeFiles/json-demo.dir/objects1.rsp
 json-demo.exe: CMakeFiles/json-demo.dir/link.txt
