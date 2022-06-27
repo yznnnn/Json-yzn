@@ -46,12 +46,26 @@ namespace yzn {
         TEST_GENERATOR_BY_STRING("\"Hello\\u0000World\"");
     }
 
+    static void Test_Generator_Array(){
+        TEST_GENERATOR_BY_STRING("[]");
+        TEST_GENERATOR_BY_STRING("[null,false,true,123,\"abc\",[1,2,3]]");
+    }
+
+    static void Test_Generator_Object(){
+        TEST_GENERATOR_BY_STRING("{}");
+        TEST_GENERATOR_BY_STRING("{\"n\":null,\"f\":false,\"t\":true,\"i\":123,\"s\":\"abc\",\"a\":[1,2,3],\"o\":{\"1\":1,\"2\":2,\"3\":3}}");
+    }
+
+
+
     void TestJsonGenerator::test() {
         std::cout << "----------------------------------[ test JsonGenerator ]----------------------------------" << std::endl;
 
         Test_Generator_Literals();
         Test_Generator_Numbers();
         Test_Generator_String();
+        Test_Generator_Array();
+        //Test_Generator_Object();
 
         std::cout << std::endl
                   << "-------------------------------------------------------------------------------------" << std::endl

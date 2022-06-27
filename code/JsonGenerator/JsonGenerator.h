@@ -7,6 +7,7 @@
 #include "../JsonNode/JsonNode.h"
 #include <cassert>
 #include <string>
+#include <vector>
 namespace yzn {
     enum class JsonGeneratorStateCode {
         OK = 0,// 生成成功
@@ -23,6 +24,7 @@ namespace yzn {
         JsonGeneratorStateCode stringifyLiterals(const JsonNode *cur_node_ptr);
         JsonGeneratorStateCode stringifyNumber(const JsonNode *cur_node_ptr);
         JsonGeneratorStateCode stringifyString(const JsonNode *cur_node_ptr);
+        JsonGeneratorStateCode stringifyArray(const JsonNode *cur_node_ptr);
 
     public:
         JsonGeneratorStateCode stringify(const JsonNode *cur_node_ptr);
