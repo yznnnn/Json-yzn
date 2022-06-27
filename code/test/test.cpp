@@ -8,7 +8,7 @@
 namespace yzn {
     void test() {
         //TestJsonNode::test();
-        //TestJsonParser::test();
+        TestJsonParser::test();
         TestJsonGenerator::test();
     }
 }// namespace yzn
