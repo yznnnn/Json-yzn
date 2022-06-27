@@ -38,12 +38,20 @@ namespace yzn {
         TEST_GENERATOR_BY_STRING("-1.7976931348623157e+308");
     }
 
+    static void Test_Generator_String(){
+        TEST_GENERATOR_BY_STRING("\"\"");
+        TEST_GENERATOR_BY_STRING("\"Hello\"");
+        TEST_GENERATOR_BY_STRING("\"Hello\\nWorld\"");
+        TEST_GENERATOR_BY_STRING("\"\\\" \\\\ / \\b \\f \\n \\r \\t\"");
+        TEST_GENERATOR_BY_STRING("\"Hello\\u0000World\"");
+    }
 
     void TestJsonGenerator::test() {
         std::cout << "----------------------------------[ test JsonGenerator ]----------------------------------" << std::endl;
 
         Test_Generator_Literals();
         Test_Generator_Numbers();
+        Test_Generator_String();
 
         std::cout << std::endl
                   << "-------------------------------------------------------------------------------------" << std::endl

@@ -22,6 +22,8 @@ namespace yzn {
         JsonGeneratorStateCode stringifyValue(const JsonNode *cur_node_ptr);
         JsonGeneratorStateCode stringifyLiterals(const JsonNode *cur_node_ptr);
         JsonGeneratorStateCode stringifyNumber(const JsonNode *cur_node_ptr);
+        JsonGeneratorStateCode stringifyString(const JsonNode *cur_node_ptr);
+
     public:
         JsonGeneratorStateCode stringify(const JsonNode *cur_node_ptr);
 
