@@ -189,4 +189,5 @@ CMakeFiles/json-demo.dir/main.cpp.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.1/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
  C:/Users/yzn/Documents/GitHub/Json-yzn/code/test/TestJsonGenerator.h \
  C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonGenerator/JsonGenerator.h \
- C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonNode.h
+ C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonNode.h \
+ C:/Users/yzn/Documents/GitHub/Json-yzn/code/JsonNode/JsonDict.h

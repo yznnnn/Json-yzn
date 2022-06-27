@@ -5,6 +5,7 @@
 #ifndef JSON_DEMO_JSONGENERATOR_H
 #define JSON_DEMO_JSONGENERATOR_H
 #include "../JsonNode/JsonNode.h"
+#include "../JsonNode/JsonDict.h"
 #include <cassert>
 #include <string>
 #include <vector>
@@ -24,7 +25,9 @@ namespace yzn {
         JsonGeneratorStateCode stringifyLiterals(const JsonNode *cur_node_ptr);
         JsonGeneratorStateCode stringifyNumber(const JsonNode *cur_node_ptr);
         JsonGeneratorStateCode stringifyString(const JsonNode *cur_node_ptr);
+        JsonGeneratorStateCode stringifyStringRaw(const std::string &str_read);
         JsonGeneratorStateCode stringifyArray(const JsonNode *cur_node_ptr);
+        JsonGeneratorStateCode stringifyObject(const JsonNode *cur_node_ptr);
 
     public:
         JsonGeneratorStateCode stringify(const JsonNode *cur_node_ptr);

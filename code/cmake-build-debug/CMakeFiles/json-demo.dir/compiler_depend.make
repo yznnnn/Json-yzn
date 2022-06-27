@@ -191,7 +191,8 @@ CMakeFiles/json-demo.dir/main.cpp.obj: ../main.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2022.1.1/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
   ../test/TestJsonGenerator.h \
   ../JsonGenerator/JsonGenerator.h \
-  ../JsonNode/JsonNode.h
+  ../JsonNode/JsonNode.h \
+  ../JsonNode/JsonDict.h
 
 
 C:/Program\ Files/JetBrains/CLion\ 2022.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h:

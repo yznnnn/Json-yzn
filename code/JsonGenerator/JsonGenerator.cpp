@@ -37,7 +37,7 @@ namespace yzn {
             case JsonNodeType::TYPE_ARRAY:
                 return this->stringifyArray(cur_node_ptr);
             case JsonNodeType::TYPE_OBJECT:
-                break;
+                return this->stringifyObject(cur_node_ptr);
             default:
                 break;
         }
@@ -72,14 +72,16 @@ namespace yzn {
     }
 
     JsonGeneratorStateCode JsonGenerator::stringifyString(const JsonNode *cur_node_ptr) {
+        assert(cur_node_ptr->getType() == JsonNodeType::TYPE_STRING);
+
+        return this->stringifyStringRaw(*(std::string *) cur_node_ptr->getValue());
+    }
+
+    JsonGeneratorStateCode JsonGenerator::stringifyStringRaw(const std::string &str_read) {
         static const char hex_digits[] = {'0', '1', '2', '3', '4',
                                           '5', '6', '7', '8', '9',
                                           'A', 'B', 'C', 'D', 'E', 'F'};
-
-        assert(cur_node_ptr->getType() == JsonNodeType::TYPE_STRING);
         this->json_text += '\"';
-
-        const std::string &str_read = *(std::string *) cur_node_ptr->getValue();
         for (auto &ch: str_read) {
             switch (ch) {
                 case '\"':
@@ -124,6 +126,7 @@ namespace yzn {
             }
         }
         this->json_text += '\"';
+
         return JsonGeneratorStateCode::OK;
     }
 
@@ -141,6 +144,27 @@ namespace yzn {
             this->stringifyValue((*vec_ptr)[i]);
         }
         this->json_text += ']';
+        return JsonGeneratorStateCode::OK;
+    }
+
+    JsonGeneratorStateCode JsonGenerator::stringifyObject(const JsonNode *cur_node_ptr) {
+        assert(cur_node_ptr->getType() == JsonNodeType::TYPE_OBJECT);
+        this->json_text += '{';
+        size_t e_size = cur_node_ptr->getValue() ? ((std::vector<JsonNode *> *) cur_node_ptr->getValue())->size() : 0;
+        if (e_size > 0) {
+            const auto *vec_ptr = (std::vector<JsonDict *> *) cur_node_ptr->getValue();
+            size_t i;
+            for (i = 0; i < e_size - 1; i++) {
+                this->stringifyStringRaw((*vec_ptr)[i]->getKey());
+                this->json_text += ':';
+                this->stringifyValue((*vec_ptr)[i]->getValuePtr());
+                this->json_text += ',';
+            }
+            this->stringifyStringRaw((*vec_ptr)[i]->getKey());
+            this->json_text += ':';
+            this->stringifyValue((*vec_ptr)[i]->getValuePtr());
+        }
+        this->json_text += '}';
         return JsonGeneratorStateCode::OK;
     }
 
